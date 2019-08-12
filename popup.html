@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+      <script src="popup.js"></script>
+      <h3>Track</h3>
+
+      <input type="text" value="tracked" id="trackEvent">
+
+      <code id="trackEventY">
+        analytics.track("Registered", {
+        plan: "Pro Annual", 
+        accountType: "Facebook"
+      });
+    </code>
+    <button id="trackCopy">copy</button>
+
+      <h3>Identify</h3>
+        <code>
+          analytics.identify("97980cfea0067", {
+            name: "Peter Gibbons", 
+            email: "peter@initech.com", 
+            plan: "premium", 
+            logins: 5
+          });
+        </code>
+        <button>copy</button>
+  </body>
+</html>

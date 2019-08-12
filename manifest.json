@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Clicked It",
+  "description": "My first chrome extention",
+  "version": "1.0",
+  "author": "Shamil Ataev",
+  "browser_action":{
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Sample title"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab"]
+}
