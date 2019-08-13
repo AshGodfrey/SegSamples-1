@@ -6,10 +6,8 @@
   <body>
       <script src="popup.js"></script>
       <h3>Track</h3>
-
-      <input type="text" value="tracked" id="trackEvent">
-
-      <code id="trackEventY">
+      <input type="hidden" value='analytics.track("Registered", { plan: "Pro Annual", accountType: "Facebook" });' id="trackEvent">
+      <code>
         analytics.track("Registered", {
         plan: "Pro Annual", 
         accountType: "Facebook"
@@ -18,6 +16,7 @@
     <button id="trackCopy">copy</button>
 
       <h3>Identify</h3>
+      <input type="hidden" value='analytics.identify("97980cfea0067", { name: "Peter Gibbons", email: "peter@initech.com", plan: "premium", logins: 5 });' id="identifyEvent">
         <code>
           analytics.identify("97980cfea0067", {
             name: "Peter Gibbons", 
