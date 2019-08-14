@@ -201,3 +201,37 @@ groupPayloadVar.addEventListener('click', copyStringToClipboardGroupPayload, fal
 aliasPayloadVar.addEventListener('click', copyStringToClipboardAliasPayload, false);
 });
 
+document.addEventListener("DOMContentLoaded", function(event){
+document.getElementById("homeButton").addEventListener("click", openPage, false);
+
+function openPage() {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Show the specific tab content
+  document.getElementById('Home').style.display = "block";
+}
+});
+
+document.addEventListener("DOMContentLoaded", function(event){
+document.getElementById("newsButton").addEventListener("click", openPage, false);
+
+function openPage(){
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Show the specific tab content
+  document.getElementById('News').style.display = "block";
+
+  document.getElementById("newsButton").click();
+}
+});
+
