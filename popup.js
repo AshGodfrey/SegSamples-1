@@ -202,7 +202,7 @@ aliasPayloadVar.addEventListener('click', copyStringToClipboardAliasPayload, fal
 });
 
 document.addEventListener("DOMContentLoaded", function(event){
-document.getElementById("homeButton").addEventListener("click", openPage, false);
+document.getElementById("javaScriptButton").addEventListener("click", openPage, false);
 
 function openPage() {
   // Hide all elements with class="tabcontent" by default */
