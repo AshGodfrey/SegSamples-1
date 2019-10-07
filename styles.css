@@ -1,3 +1,22 @@
+/*Segment Colors
+light green: #52BD96
+medium green: #398A75
+dark greeen: #12434A
+gray green: #819BA0
+cream: #F6F4EB
+*/
+
+/*Style to-do
+Scroll bar
+buttons
+make top buttons into proper tabs?
+*/
+
+/*Background*/
+body {
+  background-color:#52BD96;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -28,8 +47,22 @@
 
 /* Style the tab content */
 .tabcontent {
+  background-color:white; 
   display: none;
+  border-radius: 5px;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
+}
+
+/*Style the background of the calls */
+code {
+  background-color: #F6F4EB;
+  padding: 15px;
+  border-radius: 3px;
+  display: block;
+}
+
+/*All font Styling*/
+h3 {
+  color: #12434A;
 }
