@@ -93,3 +93,24 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
 }
+
+/*scrollbar styling*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #52BD96;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #12434A ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #819BA0;
+}
