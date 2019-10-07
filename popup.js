@@ -85,6 +85,23 @@ function copyStringToClipboardE() {
   document.body.removeChild(el);
 }
 
+function copyStringToClipboardF() {
+  // Create new element
+  var el = document.createElement('input');
+  // Set value (string to be copied)
+  el.value = document.getElementById("androidScreenEvent").value;
+  // Set non-editable to avoid focus and move outside of view
+  el.setAttribute('readonly', '');
+  el.style = {position: 'absolute', left: '-9999px'};
+  document.body.appendChild(el);
+  // Select text inside element
+  el.select();
+  // Copy text to clipboard
+  document.execCommand('copy');
+  // Remove temporary element
+  document.body.removeChild(el);
+}
+
 //Event Payloads
 
 function copyStringToClipboardTrackPayload() {
@@ -172,6 +189,23 @@ function copyStringToClipboardAliasPayload() {
   document.body.removeChild(el);
 }
 
+function copyStringToClipboardAndroidScreenPayload() {
+  // Create new element
+  var el = document.createElement('input');
+  // Set value (string to be copied)
+  el.value = document.getElementById("androidScreenPayload").value; //just replace the string inside getElementId *HERE*
+  // Set non-editable to avoid focus and move outside of view
+  el.setAttribute('readonly', '');
+  el.style = {position: 'absolute', left: '-9999px'};
+  document.body.appendChild(el);
+  // Select text inside element
+  el.select();
+  // Copy text to clipboard
+  document.execCommand('copy');
+  // Remove temporary element
+  document.body.removeChild(el);
+}
+
 
 document.addEventListener("DOMContentLoaded", function(event){
 //Event Examnples
@@ -180,12 +214,14 @@ document.addEventListener("DOMContentLoaded", function(event){
     var d = document.getElementById('pageCopy');
     var e = document.getElementById('groupCopy');
     var f = document.getElementById('aliasCopy');
+    var g = document.getElementById('androidScreenCopy');
 
     b.addEventListener('click', copyStringToClipboardA, false);
     c.addEventListener('click', copyStringToClipboardB, false)
     d.addEventListener('click', copyStringToClipboardC, false)
     e.addEventListener('click', copyStringToClipboardD, false)
     f.addEventListener('click', copyStringToClipboardE, false)
+    g.addEventListener('click', copyStringToClipboardF, false)
 
 //Event Payloads
 var trackPayloadVar = document.getElementById('trackCopyPayload');
@@ -193,12 +229,14 @@ var identifyPayloadVar = document.getElementById('identifyCopyPayload');
 var pagePayloadVar = document.getElementById('pageCopyPayload');
 var groupPayloadVar = document.getElementById('groupCopyPayload');
 var aliasPayloadVar = document.getElementById('aliasCopyPayload');
+var androidScreenPayloadVar = document.getElementById('androidScreenCopyPayload');
 
 trackPayloadVar.addEventListener('click', copyStringToClipboardTrackPayload, false);
 identifyPayloadVar.addEventListener('click', copyStringToClipboardIdentifyPayload, false);
 pagePayloadVar.addEventListener('click', copyStringToClipboardPagePayload, false);
 groupPayloadVar.addEventListener('click', copyStringToClipboardGroupPayload, false);
 aliasPayloadVar.addEventListener('click', copyStringToClipboardAliasPayload, false);
+androidScreenPayloadVar.addEventListener('click', copyStringToClipboardAndroidScreenPayload, false)
 });
 
 document.addEventListener("DOMContentLoaded", function(event){
@@ -218,7 +256,7 @@ function openPage() {
 });
 
 document.addEventListener("DOMContentLoaded", function(event){
-document.getElementById("newsButton").addEventListener("click", openPage, false);
+document.getElementById("androidButton").addEventListener("click", openPage, false);
 
 function openPage(){
   // Hide all elements with class="tabcontent" by default */
@@ -229,9 +267,9 @@ function openPage(){
   }
 
   // Show the specific tab content
-  document.getElementById('News').style.display = "block";
+  document.getElementById('Android').style.display = "block";
 
-  document.getElementById("newsButton").click();
+  document.getElementById("androidButton").click();
 }
 });
 

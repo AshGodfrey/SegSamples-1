@@ -7,7 +7,7 @@
       <script src="popup.js"></script>
 
       <button class="tablink" id="javaScriptButton">JavaScript</button>
-      <button class="tablink" id="newsButton">News</button>
+      <button class="tablink" id="androidButton">Android</button>
 
       <div id="Home" class="tabcontent">
 
@@ -71,15 +71,15 @@
           <button id="aliasCopyPayload">payload</button>
       </div>
 
-      <div id="News" class="tabcontent">
-          <h3>DeKog</h3>
-          <input type="hidden" value='analytics.alias("507f191e81");' id="aliasEvent">
-          <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-fb7a14d9d86cce3e35fac2ed65ddb808", "originalTimestamp": "2019-08-14T18:26:45.703Z", "previousId": "97980cfea0067", "receivedAt": "2019-08-14T18:26:45.823Z", "sentAt": "2019-08-14T18:26:45.707Z", "timestamp": "2019-08-14T18:26:45.819Z", "type": "alias", "userId": "507f191e81" }' id="aliasPayload">
+      <div id="Android" class="tabcontent">
+          <h3>Screen</h3>
+          <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));' id="androidScreenEvent">
+          <input type="hidden" value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }' id="androidScreenPayload">
           <code>
-            analytics.alias("507f191e81");
+            analytics.screen("Question", new Properties() .putValue("question_id", "479581"));
           </code>
-          <button id="aliasCopy">copy</button>
-          <button id="aliasCopyPayload">payload</button>
+          <button id="androidScreenCopy">copy</button>
+          <button id="androidScreenCopyPayload">payload</button>
       </div>
   </body>
 </html>
