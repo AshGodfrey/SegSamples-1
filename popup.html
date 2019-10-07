@@ -2,15 +2,18 @@
 <html>
   <head>
       <link rel="stylesheet" type="text/css" href="styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="wrapper">
       <script src="popup.js"></script>
 
-      <button class="tablink" id="javaScriptButton">JavaScript</button>
-      <button class="tablink" id="androidButton">Android</button>
+      <button class="tabbutton" id="javaScriptButton">JavaScript</button>
+      <button class="tabbutton" id="androidButton">Android</button>
+
+      <div id="divider"></div>
 
       <div id="Home" class="tabcontent">
-
           <h3>Page</h3>
           <input type="hidden" value='analytics.page("Home");' id="pageEvent">
           <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "category": null, "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-e87d9a3af820a76d71425b4a11b1356c", "name": "Home", "originalTimestamp": "2019-08-14T18:26:28.528Z", "properties": { "name": "Home", "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "receivedAt": "2019-08-14T18:26:28.650Z", "sentAt": "2019-08-14T18:26:28.531Z", "timestamp": "2019-08-14T18:26:28.647Z", "type": "page", "userId": "97980cfea0067" }' id="pagePayload">
@@ -69,6 +72,7 @@
           </code>
           <button id="aliasCopy">copy</button>
           <button id="aliasCopyPayload">payload</button>
+        
       </div>
 
       <div id="Android" class="tabcontent">
@@ -81,5 +85,6 @@
           <button id="androidScreenCopy">copy</button>
           <button id="androidScreenCopyPayload">payload</button>
       </div>
+    </div>
   </body>
 </html>
