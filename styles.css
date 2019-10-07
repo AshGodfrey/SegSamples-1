@@ -1,4 +1,5 @@
 /*Segment Colors
+lightest green: #93C8A2
 light green: #52BD96
 medium green: #398A75
 dark greeen: #12434A
@@ -18,7 +19,7 @@ make top buttons into proper tabs?
 /*Background + Dividers*/
 body {
   background-color:#52BD96;
-  width: 400px;
+  width: 350px;
 }
 
 .wrapper {
@@ -38,6 +39,7 @@ body {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  background-color: #F6F4EB;
   
 }
 
@@ -47,8 +49,8 @@ body {
 }
 
 /* Create an active/current tablink class */
-.tabbutton.active {
-  /*this isn't working atm*/
+.active{
+  background-color: black;
 }
 
 /* Style the tab content */
@@ -67,9 +69,27 @@ code {
   display: block;
 }
 
+/*Style the copy buttons*/
+.copybutton {
+  background-color: #93C8A2;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 49%;
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: white;
+}
+
+.copybutton:hover{
+  background-color:#52BD96;
+}
+
 /*All font Styling*/
 h3 {
+  text-align: center;
   color: #12434A;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
 }
