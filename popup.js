@@ -1,13 +1,13 @@
 //Event Examples
 
-function copyStringToClipboardA () {
+function copyStringToClipboard(myInput) {
   // Create new element
   var el = document.createElement('input');
   // Set value (string to be copied)
-  el.value = document.getElementById("trackEvent").value;
+  el.value = document.getElementById(myInput).value;
   // Set non-editable to avoid focus and move outside of view
   el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
+  el.style = { position: 'absolute', left: '-9999px' };
   document.body.appendChild(el);
   // Select text inside element
   el.select();
@@ -17,259 +17,79 @@ function copyStringToClipboardA () {
   document.body.removeChild(el);
 }
 
-function copyStringToClipboardB() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("identifyEvent").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+document.addEventListener("DOMContentLoaded", function (event) {
 
-function copyStringToClipboardC() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("pageEvent").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  //************AJS************\\
+  //Event Examples
+  var ajsPage = document.getElementById('pageCopy');
+  var ajsIdentify = document.getElementById('identifyCopy');
+  var ajsTrack = document.getElementById('trackCopy');
+  var ajsGroup = document.getElementById('groupCopy');
+  var ajsAlias = document.getElementById('aliasCopy');
 
-function copyStringToClipboardD() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("groupEvent").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  ajsPage.addEventListener('click', () => copyStringToClipboard("pageEvent"), false);
+  ajsIdentify.addEventListener('click', () => copyStringToClipboard("identifyEvent"), false);
+  ajsTrack.addEventListener('click', () => copyStringToClipboard("trackEvent"), false);
+  ajsGroup.addEventListener('click', () => copyStringToClipboard("groupEvent"), false);
+  ajsAlias.addEventListener('click', () => copyStringToClipboard("aliasEvent"), false);
 
-function copyStringToClipboardE() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("aliasEvent").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  //Payload Examples
+  var ajsPayloadTrack = document.getElementById('trackCopyPayload');
+  var ajsPayloadIdentify = document.getElementById('identifyCopyPayload');
+  var ajsPayloadPage = document.getElementById('pageCopyPayload');
+  var ajsPayloadGroup = document.getElementById('groupCopyPayload');
+  var ajsPayloadAlias = document.getElementById('aliasCopyPayload');
 
-function copyStringToClipboardF() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("androidScreenEvent").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  ajsPayloadTrack.addEventListener('click', () => copyStringToClipboard("trackPayload"), false);
+  ajsPayloadIdentify.addEventListener('click', () => copyStringToClipboard("identifyPayload"), false);
+  ajsPayloadPage.addEventListener('click', () => copyStringToClipboard("pagePayload"), false);
+  ajsPayloadGroup.addEventListener('click', () => copyStringToClipboard("groupPayload"), false);
+  ajsPayloadAlias.addEventListener('click', () => copyStringToClipboard("aliasPayload"), false);
 
-//Event Payloads
+//************Android************\\
+  //Event Examples
+  var androidScreen = document.getElementById('androidScreenCopy');
 
-function copyStringToClipboardTrackPayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("trackPayload").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  androidScreen.addEventListener('click', () => copyStringToClipboard("androidScreenEvent"), false);
 
-function copyStringToClipboardIdentifyPayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("identifyPayload").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  //Payload Examples
+  var androidPayloadScreen = document.getElementById('androidScreenCopyPayload');
 
-function copyStringToClipboardPagePayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("pagePayload").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
+  androidPayloadScreen.addEventListener('click', () => copyStringToClipboard("androidScreenPayload"), false);
 
-function copyStringToClipboardGroupPayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("groupPayload").value;
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
-
-function copyStringToClipboardAliasPayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("aliasPayload").value; //just replace the string inside getElementId *HERE*
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
-
-function copyStringToClipboardAndroidScreenPayload() {
-  // Create new element
-  var el = document.createElement('input');
-  // Set value (string to be copied)
-  el.value = document.getElementById("androidScreenPayload").value; //just replace the string inside getElementId *HERE*
-  // Set non-editable to avoid focus and move outside of view
-  el.setAttribute('readonly', '');
-  el.style = {position: 'absolute', left: '-9999px'};
-  document.body.appendChild(el);
-  // Select text inside element
-  el.select();
-  // Copy text to clipboard
-  document.execCommand('copy');
-  // Remove temporary element
-  document.body.removeChild(el);
-}
-
-
-document.addEventListener("DOMContentLoaded", function(event){
-//Event Examnples
-    var b = document.getElementById('trackCopy');
-    var c = document.getElementById('identifyCopy');
-    var d = document.getElementById('pageCopy');
-    var e = document.getElementById('groupCopy');
-    var f = document.getElementById('aliasCopy');
-    var g = document.getElementById('androidScreenCopy');
-
-    b.addEventListener('click', copyStringToClipboardA, false);
-    c.addEventListener('click', copyStringToClipboardB, false)
-    d.addEventListener('click', copyStringToClipboardC, false)
-    e.addEventListener('click', copyStringToClipboardD, false)
-    f.addEventListener('click', copyStringToClipboardE, false)
-    g.addEventListener('click', copyStringToClipboardF, false)
-
-//Event Payloads
-var trackPayloadVar = document.getElementById('trackCopyPayload');
-var identifyPayloadVar = document.getElementById('identifyCopyPayload');
-var pagePayloadVar = document.getElementById('pageCopyPayload');
-var groupPayloadVar = document.getElementById('groupCopyPayload');
-var aliasPayloadVar = document.getElementById('aliasCopyPayload');
-var androidScreenPayloadVar = document.getElementById('androidScreenCopyPayload');
-
-trackPayloadVar.addEventListener('click', copyStringToClipboardTrackPayload, false);
-identifyPayloadVar.addEventListener('click', copyStringToClipboardIdentifyPayload, false);
-pagePayloadVar.addEventListener('click', copyStringToClipboardPagePayload, false);
-groupPayloadVar.addEventListener('click', copyStringToClipboardGroupPayload, false);
-aliasPayloadVar.addEventListener('click', copyStringToClipboardAliasPayload, false);
-androidScreenPayloadVar.addEventListener('click', copyStringToClipboardAndroidScreenPayload, false)
 });
 
-document.addEventListener("DOMContentLoaded", function(event){
-document.getElementById("javaScriptButton").addEventListener("click", openPage, false);
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("javaScriptButton").addEventListener("click", openPage, false);
 
-function openPage() {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openPage() {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Show the specific tab content
+    document.getElementById('Home').style.display = "block";
   }
-
-  // Show the specific tab content
-  document.getElementById('Home').style.display = "block";
-}
 });
 
-document.addEventListener("DOMContentLoaded", function(event){
-document.getElementById("androidButton").addEventListener("click", openPage, false);
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("androidButton").addEventListener("click", openPage, false);
 
-function openPage(){
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openPage() {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Show the specific tab content
+    document.getElementById('Android').style.display = "block";
+
+    document.getElementById("androidButton").click();
   }
-
-  // Show the specific tab content
-  document.getElementById('Android').style.display = "block";
-
-  document.getElementById("androidButton").click();
-}
 });
 
