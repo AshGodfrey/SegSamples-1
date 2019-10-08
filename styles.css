@@ -9,13 +9,6 @@ font-family: 'Lato', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
 */
 
-/*Style to-do
-Scroll bar
-fonts
-buttons
-make top buttons into proper tabs?
-*/
-
 /*Background + Dividers*/
 body {
   background-color:#52BD96;
@@ -28,7 +21,7 @@ body {
 }
 
 #divider {
-  height: 40px;
+  height: 45px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -39,6 +32,11 @@ body {
   cursor: pointer;
   padding: 14px 16px;
   background-color: #F6F4EB;
+  width: 66.5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  height: 45px;
+  color: #12434A;
 }
 
 .tabbutton:focus{
@@ -70,6 +68,7 @@ code {
   padding: 15px;
   border-radius: 3px;
   display: block;
+  
 }
 
 /*Style the copy buttons*/
@@ -89,9 +88,33 @@ code {
   background-color:#52BD96;
 }
 
+/*links tab styling*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.linkul li a {
+  border: 1px solid white; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #93C8A2; 
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  color: white; 
+  display: block; /* Make it into a block element to fill the whole list */
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.linkul li a:hover {
+  background-color: #52BD96; 
+}
+
 /*All font Styling*/
 
-h3 a{
+h3, h3 a{
   color: #12434A;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
@@ -103,7 +126,8 @@ h3 a{
   text-align: center;
 }
 
-/*tooltip styling*/
+
+/*DEPRECATED - tooltip styling*/
     /* Tooltip container */
     .tooltip {
       position: relative;
@@ -112,10 +136,10 @@ h3 a{
     /* Tooltip text */
     .tooltip .tooltiptext {
       visibility: hidden;
-      width: 350px;
-      bottom: 100%;
+      width: 200px;
+      top: 100%;
       left: 50%;
-      margin-left: -175px;
+      margin-left: -50px;
       background-color:#398A75;
       box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
       color: #fff;
@@ -133,6 +157,20 @@ h3 a{
     .tooltip:hover .tooltiptext {
       visibility: visible;
     }
+
+    /*Add arrow to the tooltip*/
+    .tooltip .tooltiptext::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;  /* At the top of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #398A75 transparent;
+    }
+    
+    
 
 /*scrollbar styling*/
     /* width */
