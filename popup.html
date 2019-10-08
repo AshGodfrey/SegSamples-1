@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
-      <script src="popup.js"></script>
 
-      <button class="tablink" id="javaScriptButton">JavaScript</button>
-      <button class="tablink" id="androidButton">Android</button>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
 
-      <div id="Home" class="tabcontent">
+<body>
+  <input id="searchbar" type="text" name="search" placeholder="Search..">
+  <div class="wrapper">
+    <script src="popup.js"></script>
 
-          <h3>Page</h3>
-          <input type="hidden" value='analytics.page("Home");' id="pageEvent">
-          <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "category": null, "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-e87d9a3af820a76d71425b4a11b1356c", "name": "Home", "originalTimestamp": "2019-08-14T18:26:28.528Z", "properties": { "name": "Home", "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "receivedAt": "2019-08-14T18:26:28.650Z", "sentAt": "2019-08-14T18:26:28.531Z", "timestamp": "2019-08-14T18:26:28.647Z", "type": "page", "userId": "97980cfea0067" }' id="pagePayload">
-          <code>
+    <button class="tabbutton" id="javaScriptButton">JS</button>
+    <button class="tabbutton" id="androidButton">Mobile</button>
+    <button class="tabbutton" id="">Server</button>
+    <button class="tabbutton" id="usefulLinks">Links</button>
+
+
+    <div id="divider"></div>
+
+    <div id="JavaScript" class="tabcontent">
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/page/" target=_blank>Page</a></h3>
+        </div>
+        <input type="hidden" value='analytics.page("Home");' id="pageEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "category": null, "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-e87d9a3af820a76d71425b4a11b1356c", "name": "Home", "originalTimestamp": "2019-08-14T18:26:28.528Z", "properties": { "name": "Home", "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "receivedAt": "2019-08-14T18:26:28.650Z", "sentAt": "2019-08-14T18:26:28.531Z", "timestamp": "2019-08-14T18:26:28.647Z", "type": "page", "userId": "97980cfea0067" }'
+          id="pagePayload">
+        <code>
             analytics.page("Home");
           </code>
-          <button id="pageCopy">copy</button>
-          <button id="pageCopyPayload">payload</button>
+        <button id="pageCopy" class="copybutton">copy</button>
+        <button id="pageCopyPayload" class="copybutton">payload</button>
+      </div>
 
-          <h3>Identify</h3>
-          <input type="hidden" value='analytics.identify("97980cfea0067", { name: "Peter Gibbons", email: "peter@initech.com", plan: "premium", logins: 5 });' id="identifyEvent">
-          <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-7b2481f097768c01370e7095bb1de54a", "originalTimestamp": "2019-08-14T18:26:22.163Z", "receivedAt": "2019-08-14T18:26:22.278Z", "sentAt": "2019-08-14T18:26:22.164Z", "timestamp": "2019-08-14T18:26:22.277Z", "traits": { "email": "peter@initech.com", "logins": 5, "name": "Peter Gibbons", "plan": "premium" }, "type": "identify", "userId": "97980cfea0067" }' id="identifyPayload">
-          <code>
+      <div class="events">
+        <div class="headerlink ">
+          <h3><a href="https://segment.com/docs/spec/identify/" target=_blank>Identify</a></h3>
+        </div>
+        <input type="hidden"
+          value='analytics.identify("97980cfea0067", { name: "Peter Gibbons", email: "peter@initech.com", plan: "premium", logins: 5 });'
+          id="identifyEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-7b2481f097768c01370e7095bb1de54a", "originalTimestamp": "2019-08-14T18:26:22.163Z", "receivedAt": "2019-08-14T18:26:22.278Z", "sentAt": "2019-08-14T18:26:22.164Z", "timestamp": "2019-08-14T18:26:22.277Z", "traits": { "email": "peter@initech.com", "logins": 5, "name": "Peter Gibbons", "plan": "premium" }, "type": "identify", "userId": "97980cfea0067" }'
+          id="identifyPayload">
+        <code>
               analytics.identify("97980cfea0067", {
                 name: "Peter Gibbons", 
                 email: "peter@initech.com", 
@@ -31,25 +53,40 @@
                 logins: 5
               });
           </code>
-          <button id="identifyCopy">copy</button>
-          <button id="identifyCopyPayload">payload</button>
+        <button id="identifyCopy" class="copybutton">copy</button>
+        <button id="identifyCopyPayload" class="copybutton">payload</button>
+      </div>
 
-          <h3>Track</h3>
-          <input type="hidden" value='analytics.track("Registered", { plan: "Pro Annual", accountType: "Facebook" });' id="trackEvent">
-          <input type="hidden" value='{ "anonymousId": "261d2947-b89e-432b-81a4-ca5034820694", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "event": "Registered", "integrations": {}, "messageId": "ajs-14aef25b12c1e02dca1636f10f3c5b61", "originalTimestamp": "2019-08-14T18:26:15.475Z", "properties": { "accountType": "Facebook", "plan": "Pro Annual" }, "receivedAt": "2019-08-14T18:26:15.592Z", "sentAt": "2019-08-14T18:26:15.478Z", "timestamp": "2019-08-14T18:26:15.589Z", "type": "track", "userId": "test@test.com" }' id="trackPayload">
-          <code>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/track/" target=_blank>Track</a></h3>
+        </div>
+        <input type="hidden" value='analytics.track("Registered", { plan: "Pro Annual", accountType: "Facebook" });'
+          id="trackEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "261d2947-b89e-432b-81a4-ca5034820694", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "event": "Registered", "integrations": {}, "messageId": "ajs-14aef25b12c1e02dca1636f10f3c5b61", "originalTimestamp": "2019-08-14T18:26:15.475Z", "properties": { "accountType": "Facebook", "plan": "Pro Annual" }, "receivedAt": "2019-08-14T18:26:15.592Z", "sentAt": "2019-08-14T18:26:15.478Z", "timestamp": "2019-08-14T18:26:15.589Z", "type": "track", "userId": "test@test.com" }'
+          id="trackPayload">
+        <code>
             analytics.track("Registered", {
             plan: "Pro Annual", 
             accountType: "Facebook"
           });
         </code>
-        <button id="trackCopy">copy</button>
-        <button id="trackCopyPayload">payload</button>
-    
-          <h3>Group</h3>
-          <input type="hidden" value='analytics.group("0e8c78ea9d97a7b8185e8632", { name: "Initech", industry: "Technology", employees: 329, plan: "enterprise", "total billed": 830 });' id="groupEvent">
-          <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "groupId": "0e8c78ea9d97a7b8185e8632", "integrations": {}, "messageId": "ajs-a7ac04451a6bb859b8a1aced926b2159", "originalTimestamp": "2019-08-14T18:26:36.899Z", "receivedAt": "2019-08-14T18:26:37.009Z", "sentAt": "2019-08-14T18:26:36.901Z", "timestamp": "2019-08-14T18:26:37.007Z", "traits": { "employees": 329, "industry": "Technology", "name": "Initech", "plan": "enterprise", "total billed": 830 }, "type": "group", "userId": "97980cfea0067" }' id="groupPayload">
-          <code>
+        <button id="trackCopy" class="copybutton">copy</button>
+        <button id="trackCopyPayload" class="copybutton">payload</button>
+      </div>
+
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/group/" target=_blank>Group</a></h3>
+        </div>
+        <input type="hidden"
+          value='analytics.group("0e8c78ea9d97a7b8185e8632", { name: "Initech", industry: "Technology", employees: 329, plan: "enterprise", "total billed": 830 });'
+          id="groupEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "groupId": "0e8c78ea9d97a7b8185e8632", "integrations": {}, "messageId": "ajs-a7ac04451a6bb859b8a1aced926b2159", "originalTimestamp": "2019-08-14T18:26:36.899Z", "receivedAt": "2019-08-14T18:26:37.009Z", "sentAt": "2019-08-14T18:26:36.901Z", "timestamp": "2019-08-14T18:26:37.007Z", "traits": { "employees": 329, "industry": "Technology", "name": "Initech", "plan": "enterprise", "total billed": 830 }, "type": "group", "userId": "97980cfea0067" }'
+          id="groupPayload">
+        <code>
             analytics.group("0e8c78ea9d97a7b8185e8632", {
               name: "Initech", 
               industry: "Technology",
@@ -58,28 +95,73 @@
               "total billed": 830
             });
           </code>
-          <button id="groupCopy">copy</button>
-          <button id="groupCopyPayload">payload</button>
-    
-          <h3>Alias</h3>
-          <input type="hidden" value='analytics.alias("507f191e81");' id="aliasEvent">
-          <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-fb7a14d9d86cce3e35fac2ed65ddb808", "originalTimestamp": "2019-08-14T18:26:45.703Z", "previousId": "97980cfea0067", "receivedAt": "2019-08-14T18:26:45.823Z", "sentAt": "2019-08-14T18:26:45.707Z", "timestamp": "2019-08-14T18:26:45.819Z", "type": "alias", "userId": "507f191e81" }' id="aliasPayload">
-          <code>
-            analytics.alias("507f191e81");
-          </code>
-          <button id="aliasCopy">copy</button>
-          <button id="aliasCopyPayload">payload</button>
+        <button id="groupCopy" class="copybutton">copy</button>
+        <button id="groupCopyPayload" class="copybutton">payload</button>
       </div>
 
-      <div id="Android" class="tabcontent">
-          <h3>Screen</h3>
-          <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));' id="androidScreenEvent">
-          <input type="hidden" value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }' id="androidScreenPayload">
-          <code>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/alias/" target=_blank>Alias</a></h3>
+        </div>
+        <input type="hidden" value='analytics.alias("507f191e81");' id="aliasEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-fb7a14d9d86cce3e35fac2ed65ddb808", "originalTimestamp": "2019-08-14T18:26:45.703Z", "previousId": "97980cfea0067", "receivedAt": "2019-08-14T18:26:45.823Z", "sentAt": "2019-08-14T18:26:45.707Z", "timestamp": "2019-08-14T18:26:45.819Z", "type": "alias", "userId": "507f191e81" }'
+          id="aliasPayload">
+        <code>
+            analytics.alias("507f191e81");
+          </code>
+        <button id="aliasCopy" class="copybutton">copy</button>
+        <button id="aliasCopyPayload" class="copybutton">payload</button>
+      </div>
+
+    </div>
+
+    <div id="Android" class="tabcontent">
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
+        </div>
+        <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));'
+          id="androidScreenEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }'
+          id="androidScreenPayload">
+        <code>
             analytics.screen("Question", new Properties() .putValue("question_id", "479581"));
           </code>
-          <button id="androidScreenCopy">copy</button>
-          <button id="androidScreenCopyPayload">payload</button>
+        <button id="androidScreenCopy" class="copybutton">copy</button>
+        <button id="androidScreenCopyPayload" class="copybutton">payload</button>
       </div>
-  </body>
+    </div>
+
+    <div id="links" class="tabcontent">
+      <div class="headerlink">
+        <h3>Public Links</h3>
+      </div>
+      <ul class="linkul">
+        <li class="tooltip">
+          <a href="">Segment University</a>
+          <span class="tooltiptext">Tooltip text</span>
+        </li>
+        <li class="tooltip">
+          <a href="">Segment University</a>
+          <span class="tooltiptext">Tooltip text</span>
+        </li>
+        <li><a href="">Test One</a></li>
+      </ul>
+      <div class="headerlink">
+        <h3>Internal Links</h3>
+      </div>
+      <ul class="linkul">
+        <li><a href="">Segment University</a></li>
+        <li><a href="">Test One</a></li>
+        <li><a href="">Test One</a></li>
+      </ul>
+      <!--Lazy man styling to be fixed-->
+      <BR>
+    </div>
+
+  </div>
+</body>
+
 </html>
