@@ -19,6 +19,9 @@ function copyStringToClipboard(myInput) {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
+  //By default the JavaScript tab is open as its the most commonly used tab
+  document.getElementById('JavaScript').style.display = "block";
+
   //************AJS************\\
   //Event Examples
   var ajsPage = document.getElementById('pageCopy');
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   ajsPayloadGroup.addEventListener('click', () => copyStringToClipboard("groupPayload"), false);
   ajsPayloadAlias.addEventListener('click', () => copyStringToClipboard("aliasPayload"), false);
 
-//************Android************\\
+  //************Android************\\
   //Event Examples
   var androidScreen = document.getElementById('androidScreenCopy');
 
@@ -71,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     // Show the specific tab content
-    document.getElementById('Home').style.display = "block";
+    document.getElementById('JavaScript').style.display = "block";
   }
 });
 
@@ -110,5 +113,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById('links').style.display = "block";
 
     document.getElementById("usefulLinks").click();
+  }
+});
+
+//Search box logic
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("searchbar").addEventListener("keyup", search_events);
+
+  function search_events() {
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('events');
+
+    for (i = 0; i < x.length; i++) {
+      if (!x[i].innerText.toLowerCase().includes(input)) {
+        x[i].style.display = "none";
+      }
+      else {
+        x[i].style.display = "block";
+      }
+    }
   }
 });
