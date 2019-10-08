@@ -8,15 +8,17 @@
     <div class="wrapper">
       <script src="popup.js"></script>
 
-      <button class="tabbutton" id="javaScriptButton">JavaScript</button>
-      <button class="tabbutton" id="androidButton">Android</button>
+      <button class="tabbutton" id="javaScriptButton">JS</button>
+      <button class="tabbutton" id="androidButton">Mobile</button>
+      <button class="tabbutton" id="">Server</button>
+      <button class="tabbutton" id="usefulLinks">Links</button>
+     
 
       <div id="divider"></div>
 
       <div id="Home" class="tabcontent">
-          <div class="headerlink tooltip">
-              <h3><a href="https://segment.com/docs/spec/page/" target=_blank>Page</a></h3>
-              <span class="tooltiptext">The page call lets you record whenever a user sees a page of your website, along with any optional properties about the page.</span>
+          <div class="headerlink">
+            <h3><a href="https://segment.com/docs/spec/page/" target=_blank>Page</a></h3>
           </div>
           <input type="hidden" value='analytics.page("Home");' id="pageEvent">
           <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "category": null, "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-e87d9a3af820a76d71425b4a11b1356c", "name": "Home", "originalTimestamp": "2019-08-14T18:26:28.528Z", "properties": { "name": "Home", "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "receivedAt": "2019-08-14T18:26:28.650Z", "sentAt": "2019-08-14T18:26:28.531Z", "timestamp": "2019-08-14T18:26:28.647Z", "type": "page", "userId": "97980cfea0067" }' id="pagePayload">
@@ -26,9 +28,8 @@
           <button id="pageCopy" class="copybutton">copy</button>
           <button id="pageCopyPayload" class="copybutton">payload</button>
 
-          <div class="headerlink tooltip">
-              <h3><a href="https://segment.com/docs/spec/identify/" target=_blank>Identify</a></h3>
-              <span class="tooltiptext">Identify lets you tie a user to their actions and record traits about them.</span>
+          <div class="headerlink ">
+            <h3><a href="https://segment.com/docs/spec/identify/" target=_blank>Identify</a></h3>
           </div>
           <input type="hidden" value='analytics.identify("97980cfea0067", { name: "Peter Gibbons", email: "peter@initech.com", plan: "premium", logins: 5 });' id="identifyEvent">
           <input type="hidden" value='{ "anonymousId": "50f7d21a-a19f-40fd-a45d-a7b8c8d66078", "context": { "ip": "80.111.157.43", "library": { "name": "analytics.js", "version": "3.9.0" }, "page": { "path": "/segment.html", "referrer": "", "search": "", "title": "Home Questionnaire<span id=\"selection-marker-1\" class=\"redactor-selection-marker\"></span>", "url": "https://gezgblack.github.io/segment.html" }, "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36" }, "integrations": {}, "messageId": "ajs-7b2481f097768c01370e7095bb1de54a", "originalTimestamp": "2019-08-14T18:26:22.163Z", "receivedAt": "2019-08-14T18:26:22.278Z", "sentAt": "2019-08-14T18:26:22.164Z", "timestamp": "2019-08-14T18:26:22.277Z", "traits": { "email": "peter@initech.com", "logins": 5, "name": "Peter Gibbons", "plan": "premium" }, "type": "identify", "userId": "97980cfea0067" }' id="identifyPayload">
@@ -88,9 +89,8 @@
       </div>
 
       <div id="Android" class="tabcontent">
-          <div class="headerlink tooltip">
-              <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
-              <span class="tooltiptext">The screen call lets you record whenever a user sees a screen, the mobile equivalent of page, in your mobile app, along with any properties about the screen.</span>
+          <div class="headerlink">
+            <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
           </div>
           <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));' id="androidScreenEvent">
           <input type="hidden" value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }' id="androidScreenPayload">
@@ -100,6 +100,34 @@
           <button id="androidScreenCopy" class="copybutton">copy</button>
           <button id="androidScreenCopyPayload" class="copybutton">payload</button>
       </div>
+
+      <div id="links" class="tabcontent">
+        <div class="headerlink">
+          <h3>Public Links</h3>
+        </div>
+        <ul class="linkul">
+            <li class="tooltip">
+              <a href="">Segment University</a>
+              <span class="tooltiptext">Tooltip text</span>
+            </li> 
+            <li class="tooltip">
+                <a href="">Segment University</a>
+                <span class="tooltiptext">Tooltip text</span>
+              </li> 
+            <li><a href="">Test One</a></li>
+        </ul>
+        <div class="headerlink">
+          <h3>Internal Links</h3>
+        </div>
+        <ul class="linkul">
+            <li><a href="">Segment University</a></li>
+            <li><a href="">Test One</a></li>
+            <li><a href="">Test One</a></li>
+        </ul>
+        <!--Lazy man styling to be fixed-->
+        <BR>
+      </div>
+
     </div>
   </body>
 </html>
