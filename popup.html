@@ -12,7 +12,7 @@
     <script src="popup.js"></script>
 
     <button class="tabbutton" id="javaScriptButton">JS</button>
-    <button class="tabbutton" id="androidButton">Mobile</button>
+    <button class="tabbutton" id="mobileButton">Mobile</button>
     <button class="tabbutton" id="server">Server</button>
     <button class="tabbutton" id="usefulLinks">Links</button>
     <button class="tabbutton" id="snippets">Snippets</button>
@@ -121,8 +121,14 @@
 
     </div>
 
-    <div id="Android" class="tabcontent">
-      <div class="events">
+    <div id="Mobile" class="tabcontent">
+
+        <select id="dropBoxSelectOs">
+            <option value="android">Android</option>
+            <option value="ios">iOS</option>
+          </select>
+
+      <div class="events" id="androidEvent">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
         </div>
@@ -137,7 +143,7 @@
         <button id="androidScreenCopy" class="copybutton">copy</button>
         <button id="androidScreenCopyPayload" class="copybutton">payload</button>
       </div>
-      <div class="events">
+      <div class="events" id="androidEvent">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
         </div>
@@ -156,7 +162,7 @@
         <button id="androidIdentifyCopy" class="copybutton">copy</button>
         <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
       </div>
-      <div class="events">
+      <div class="events" id="androidEvent">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
         </div>
@@ -173,7 +179,7 @@
         <button id="androidTrackCopy" class="copybutton">copy</button>
         <button id="androidTrackCopyPayload" class="copybutton">payload</button>
       </div>
-      <div class="events">
+      <div class="events" id="androidEvent">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
         </div>
@@ -186,7 +192,7 @@
         </code>
         <button id="androidGroupCopy" class="copybutton">copy</button>
       </div>
-      <div class="events">
+      <div class="events" id="androidEvent">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
         </div>
@@ -198,6 +204,65 @@
           </code>
         <button id="androidAliasCopy" class="copybutton">copy</button>
       </div>
+      <div class="events" id="iosEvent">
+          <div class="headerlink">
+            <h3><a href="https://segment.com/docs/sources/mobile/ios/#screen" target=_blank>Screen</a></h3>
+          </div>
+          <input type="hidden" value='[[SEGAnalytics sharedAnalytics] screen:@"Photo Feed" properties:@{ @"Feed Type": @"private" }];'
+            id="iosScreenEvent">
+          <code>
+              [[SEGAnalytics sharedAnalytics] screen:@"Photo Feed"
+              properties:@{ @"Feed Type": @"private" }];
+            </code>
+          <button id="iosScreenCopy" class="copybutton">copy</button>
+        </div>
+        <div class="events" id="iosEvent">
+            <div class="headerlink">
+              <h3><a href="https://segment.com/docs/sources/mobile/ios/#identify" target=_blank>Identify</a></h3>
+            </div>
+            <input type="hidden" value='[[SEGAnalytics sharedAnalytics] identify:@"a users id" traits:@{ @"email": @"a users email address" }];'
+              id="iosIdentifyEvent">
+            <code>
+                [[SEGAnalytics sharedAnalytics] identify:@"a user's id"
+                traits:@{ @"email": @"a user's email address" }];
+              </code>
+            <button id="iosIdentifyCopy" class="copybutton">copy</button>
+          </div>
+          <div class="events" id="iosEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/sources/mobile/ios/#track" target=_blank>Track</a></h3>
+              </div>
+              <input type="hidden" value='[[SEGAnalytics sharedAnalytics] track:@"Item Purchased" properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];'
+                id="iosTrackEvent">
+              <code>
+                  [[SEGAnalytics sharedAnalytics] track:@"Item Purchased"
+                   properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];
+                </code>
+              <button id="iosTrackCopy" class="copybutton">copy</button>
+            </div>
+            <div class="events" id="iosEvent">
+                <div class="headerlink">
+                  <h3><a href="https://segment.com/docs/sources/mobile/ios/#group" target=_blank>Group</a></h3>
+                </div>
+                <input type="hidden" value='[[SEGAnalytics sharedAnalytics] group:@"group123" traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];'
+                  id="iosGroupEvent">
+                <code>
+                    [[SEGAnalytics sharedAnalytics] group:@"group123"
+                    traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];
+                  </code>
+                <button id="iosGroupCopy" class="copybutton">copy</button>
+              </div>
+              <div class="events" id="iosEvent">
+                  <div class="headerlink">
+                    <h3><a href="https://segment.com/docs/sources/mobile/ios/#alias" target=_blank>Alias</a></h3>
+                  </div>
+                  <input type="hidden" value='[[SEGAnalytics sharedAnalytics] alias:@"some new id"];'
+                    id="iosAliasEvent">
+                  <code>
+                      [[SEGAnalytics sharedAnalytics] alias:@"some new id"];
+                    </code>
+                  <button id="iosAliasCopy" class="copybutton">copy</button>
+                </div>
     </div>
 
     <div id="links" class="tabcontent">

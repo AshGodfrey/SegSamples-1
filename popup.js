@@ -72,6 +72,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
   androidPayloadIdentify.addEventListener('click', () => copyStringToClipboard("androidIdentifyPayload"), false);
   androidPayloadTrack.addEventListener('click', () => copyStringToClipboard("androidTrackPayload"), false);
 
+
+    //************iOS************\\
+  //Event Examples
+  var iosScreen = document.getElementById('iosScreenCopy');
+  var iosIdentify = document.getElementById('iosIdentifyCopy');
+  var iosTrack = document.getElementById('iosTrackCopy');
+  var iosGroup = document.getElementById('iosGroupCopy');
+  var iosAlias = document.getElementById('iosAliasCopy');
+
+  iosScreen.addEventListener('click', () => copyStringToClipboard("iosScreenEvent"), false);
+  iosIdentify.addEventListener('click', () => copyStringToClipboard("iosIdentifyEvent"), false);
+  iosTrack.addEventListener('click', () => copyStringToClipboard("iosTrackEvent"), false);
+  iosGroup.addEventListener('click', () => copyStringToClipboard("iosGroupEvent"), false);
+  iosAlias.addEventListener('click', () => copyStringToClipboard("iosAliasEvent"), false);
 });
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -91,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  document.getElementById("androidButton").addEventListener("click", openPage, false);
+  document.getElementById("mobileButton").addEventListener("click", openPage, false);
 
   function openPage() {
     // Hide all elements with class="tabcontent" by default */
@@ -102,9 +116,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     // Show the specific tab content
-    document.getElementById('Android').style.display = "block";
-
-    document.getElementById("androidButton").click();
+    document.getElementById('Mobile').style.display = "block";
+    document.getElementById("mobileButton").click();
   }
 });
 
@@ -133,12 +146,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("searchbar").addEventListener("keyup", search_events);
 
   function search_events() {
-    let input = document.getElementById('searchbar').value
+    let input = document.getElementById(' ').value
     input = input.toLowerCase();
     let x = document.getElementsByClassName('events');
 
     for (i = 0; i < x.length; i++) {
       if (!x[i].innerText.toLowerCase().includes(input)) {
+        x[i].style.display = "none";
+      }
+      else {
+        x[i].style.display = "block";
+      }
+    }
+  }
+});
+
+//Dropdown logic
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("dropBoxSelectOs").addEventListener("change", search_events);
+
+  function search_events() {
+    let input = document.getElementById('dropBoxSelectOs').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('events');
+
+    for (i = 0; i < x.length; i++) {
+      if (!x[i].id.toLowerCase().includes(input)) {
         x[i].style.display = "none";
       }
       else {
