@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("searchbar").addEventListener("keyup", search_events);
 
   function search_events() {
-    let input = document.getElementById(' ').value
+    let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
     let x = document.getElementsByClassName('events');
 
