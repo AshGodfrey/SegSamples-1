@@ -12,7 +12,7 @@ font-family: 'Source Sans Pro', sans-serif;
 /*Background + Dividers*/
 body {
   background-color:#52BD96;
-  width: 350px;
+  width: 370px;
 }
 
 .wrapper {
@@ -32,9 +32,9 @@ body {
   cursor: pointer;
   padding: 14px 16px;
   background-color: #F6F4EB;
-  width: 66.5px;
+  width: 70.3px;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   height: 45px;
   color: #12434A;
 }
@@ -54,6 +54,26 @@ body {
   background-color: black;
 }
 
+/*searchbar styling*/
+#searchbar-wrapper {
+  background-color: white;
+}
+
+#searchbar {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+  margin-top: 15px;
+  margin-left: 6%;
+  width: 81%;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+#searchbar:focus {
+  outline: none;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+}
 /* Style the tab content */
 .tabcontent {
   background-color:white; 
