@@ -4,20 +4,25 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <input id="searchbar" type="text" name="search" placeholder="Search..">
   <div class="wrapper">
     <script src="popup.js"></script>
 
     <button class="tabbutton" id="javaScriptButton">JS</button>
     <button class="tabbutton" id="androidButton">Mobile</button>
-    <button class="tabbutton" id="">Server</button>
+    <button class="tabbutton" id="server">Server</button>
     <button class="tabbutton" id="usefulLinks">Links</button>
+    <button class="tabbutton" id="snippets">Snippets</button>
 
 
     <div id="divider"></div>
+
+    <div id="searchbar-wrapper">
+      <input id="searchbar" type="text" name="search" placeholder="Search...">
+    </div>
 
     <div id="JavaScript" class="tabcontent">
       <div class="events">
@@ -132,30 +137,137 @@
         <button id="androidScreenCopy" class="copybutton">copy</button>
         <button id="androidScreenCopyPayload" class="copybutton">payload</button>
       </div>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
+        </div>
+        <input type="hidden"
+          value='analytics.identify("id_987000", new Traits() .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540") .putValue("email", "test@test.test") .putValue("userId", "id_987000"));'
+          id="androidIdentifyEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": “test@test.test”, "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "integrations": {}, "messageId": "b7b5bf66-2cc1-466e-af7d-989e647ec673", "originalTimestamp": "2019-10-02T02:00:02.964Z", "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-02T02:00:02.659Z", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "type": "identify", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+          id="androidIdentifyPayload">
+        <code>
+              analytics.identify("id_987000", new Traits()
+              .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540")
+              .putValue("email", "test@test.test")
+              .putValue("userId", "id_987000"));
+            </code>
+        <button id="androidIdentifyCopy" class="copybutton">copy</button>
+        <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
+      </div>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
+        </div>
+        <input type="hidden"
+          value='analytics.track("Application Opened", new Properties() .putValue("from_background", true));'
+          id="androidTrackEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "event": "Application Opened", "integrations": {}, "messageId": "36bcbff0-2845-469e-92a8-8ace580ca87f", "originalTimestamp": "2019-10-01T23:03:48.985Z", "properties": { "from_background": true }, "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-01T23:03:48.680Z", "type": "track", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+          id="androidTrackPayload">
+        <code>
+              analytics.track("Application Opened", new Properties()
+              .putValue("from_background", true));
+              </code>
+        <button id="androidTrackCopy" class="copybutton">copy</button>
+        <button id="androidTrackCopyPayload" class="copybutton">payload</button>
+      </div>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
+        </div>
+        <input type="hidden"
+          value='Analytics.with(context).group("a users id", "a group id", new Traits().putEmployees(20));'
+          id="androidGroupEvent">
+        <code>
+              Analytics.with(context).group("a user's id", "a group id", 
+              new Traits().putEmployees(20));
+        </code>
+        <button id="androidGroupCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
+        </div>
+        <input type="hidden" value='Analytics.with(context).alias(newId) Analytics.with(context).identify(newId);'
+          id="androidAliasEvent">
+        <code>
+              Analytics.with(context).alias(newId)
+              Analytics.with(context).identify(newId);
+          </code>
+        <button id="androidAliasCopy" class="copybutton">copy</button>
+      </div>
     </div>
 
     <div id="links" class="tabcontent">
       <div class="headerlink">
-        <h3>Public Links</h3>
+        <h3>Best Practices</h3>
       </div>
       <ul class="linkul">
+          <div class="events">
         <li class="tooltip">
-          <a href="">Segment University</a>
-          <span class="tooltiptext">Tooltip text</span>
+          <a href="https://segment.com/docs/guides/best-practices/what-are-best-practices-for-identifying-users/"
+            target=_blank>Identifying Users</a>
+          <span class="tooltiptext">Track newly registered users the right way. </span>
         </li>
+        </div>
+        <div class="events">
         <li class="tooltip">
-          <a href="">Segment University</a>
-          <span class="tooltiptext">Tooltip text</span>
+          <a href="https://segment.com/docs/guides/best-practices/should-i-instrument-data-collection-on-the-client-or-server/"
+            target=_blank>Client vs. Server Side</a>
+          <span class="tooltiptext">Should I instrument data collection on the client or server?</span>
         </li>
-        <li><a href="">Test One</a></li>
+        </div>
+        <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/guides/best-practices/how-do-I-test-my-connections/" target=_blank>How do I
+            test my connections?</a>
+          <span class="tooltiptext">How should I test my connections?</span>
+        </li>
+        </div>
+        <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/sources/website/analytics.js/#selecting-destinations"
+            target=_blank>Integrations Object</a>
+          <span class="tooltiptext">How to use the integrations object?</span>
+        </li>
+      </div>
       </ul>
+
       <div class="headerlink">
-        <h3>Internal Links</h3>
+        <h3>Getting Started</h3>
+      </div>
+      <ul class="linkul">
+          <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/sources/website/analytics.js/quickstart/" target=_blank>Quickstart:
+            Analytics.js</a>
+          <span class="tooltiptext">Quickstart guide for implementing Analytics.js </span>
+        </li>
+      </div>
+      </ul>
+
+      <div class="headerlink">
+        <h3>A third Section</h3>
       </div>
       <ul class="linkul">
         <li><a href="">Segment University</a></li>
         <li><a href="">Test One</a></li>
+        <li>
+          <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
+        </li>
+      </ul>
+
+      <div class="headerlink">
+        <h3>A Fourth Section</h3>
+      </div>
+      <ul class="linkul">
+        <li><a href="">Segment University</a></li>
         <li><a href="">Test One</a></li>
+        <li>
+          <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
+        </li>
       </ul>
       <!--Lazy man styling to be fixed-->
       <BR>
