@@ -52,13 +52,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //************Android************\\
   //Event Examples
   var androidScreen = document.getElementById('androidScreenCopy');
+  var androidIdentify = document.getElementById('androidIdentifyCopy');
+  var androidTrack = document.getElementById('androidTrackCopy');
+  var androidGroup = document.getElementById('androidGroupCopy');
+  var androidAlias = document.getElementById('androidAliasCopy');
 
   androidScreen.addEventListener('click', () => copyStringToClipboard("androidScreenEvent"), false);
+  androidIdentify.addEventListener('click', () => copyStringToClipboard("androidIdentifyEvent"), false);
+  androidTrack.addEventListener('click', () => copyStringToClipboard("androidTrackEvent"), false);
+  androidGroup.addEventListener('click', () => copyStringToClipboard("androidGroupEvent"), false);
+  androidAlias.addEventListener('click', () => copyStringToClipboard("androidAliasEvent"), false);
 
   //Payload Examples
   var androidPayloadScreen = document.getElementById('androidScreenCopyPayload');
+  var androidPayloadIdentify = document.getElementById('androidIdentifyCopyPayload');
+  var androidPayloadTrack = document.getElementById('androidTrackCopyPayload');
 
   androidPayloadScreen.addEventListener('click', () => copyStringToClipboard("androidScreenPayload"), false);
+  androidPayloadIdentify.addEventListener('click', () => copyStringToClipboard("androidIdentifyPayload"), false);
+  androidPayloadTrack.addEventListener('click', () => copyStringToClipboard("androidTrackPayload"), false);
 
 });
 
