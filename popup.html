@@ -4,20 +4,25 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <input id="searchbar" type="text" name="search" placeholder="Search..">
   <div class="wrapper">
     <script src="popup.js"></script>
 
     <button class="tabbutton" id="javaScriptButton">JS</button>
     <button class="tabbutton" id="androidButton">Mobile</button>
-    <button class="tabbutton" id="">Server</button>
+    <button class="tabbutton" id="server">Server</button>
     <button class="tabbutton" id="usefulLinks">Links</button>
+    <button class="tabbutton" id="snippets">Snippets</button>
 
 
     <div id="divider"></div>
+
+    <div id="searchbar-wrapper">
+      <input id="searchbar" type="text" name="search" placeholder="Search...">
+    </div>
 
     <div id="JavaScript" class="tabcontent">
       <div class="events">
@@ -136,27 +141,52 @@
 
     <div id="links" class="tabcontent">
       <div class="headerlink">
-        <h3>Public Links</h3>
+        <h3>Best Practices</h3>
       </div>
       <ul class="linkul">
         <li class="tooltip">
-          <a href="">Segment University</a>
-          <span class="tooltiptext">Tooltip text</span>
+          <a href="https://segment.com/docs/guides/best-practices/what-are-best-practices-for-identifying-users/" target=_blank>Identifying Users</a>
+          <span class="tooltiptext">Track newly registered users the right way. </span>
         </li>
         <li class="tooltip">
-          <a href="">Segment University</a>
-          <span class="tooltiptext">Tooltip text</span>
+          <a href="https://segment.com/docs/guides/best-practices/should-i-instrument-data-collection-on-the-client-or-server/" target=_blank>Client vs. Server Side</a>
+          <span class="tooltiptext">Should I instrument data collection on the client or server?</span>
         </li>
         <li><a href="">Test One</a></li>
       </ul>
+
       <div class="headerlink">
-        <h3>Internal Links</h3>
+        <h3>Getting Started</h3>
       </div>
       <ul class="linkul">
         <li><a href="">Segment University</a></li>
         <li><a href="">Test One</a></li>
-        <li><a href="">Test One</a></li>
+        <li>
+          <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
+        </li>
       </ul>
+
+      <div class="headerlink">
+          <h3>A third Section</h3>
+        </div>
+        <ul class="linkul">
+          <li><a href="">Segment University</a></li>
+          <li><a href="">Test One</a></li>
+          <li>
+            <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
+          </li>
+        </ul>
+
+        <div class="headerlink">
+            <h3>A Fourth Section</h3>
+          </div>
+          <ul class="linkul">
+            <li><a href="">Segment University</a></li>
+            <li><a href="">Test One</a></li>
+            <li>
+              <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
+            </li>
+          </ul>
       <!--Lazy man styling to be fixed-->
       <BR>
     </div>
