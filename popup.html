@@ -122,147 +122,154 @@
     </div>
 
     <div id="Mobile" class="tabcontent">
+      <form class="form">
+        <div id="switch-field">
+          <input type="radio" id="radio-one" name="switch-one" value="android" checked/>
+          <label for="radio-one">Android</label>
+          <input type="radio" id="radio-two" name="switch-one" value="ios" />
+          <label for="radio-two">iOS</label>
+        </div>
+      </form>
 
-        <select id="dropBoxSelectOs">
-            <option value="android">Android</option>
-            <option value="ios">iOS</option>
-          </select>
-
-      <div class="events" id="androidEvent">
-        <div class="headerlink">
-          <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
-        </div>
-        <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));'
-          id="androidScreenEvent">
-        <input type="hidden"
-          value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }'
-          id="androidScreenPayload">
-        <code>
-            analytics.screen("Question", new Properties() .putValue("question_id", "479581"));
-          </code>
-        <button id="androidScreenCopy" class="copybutton">copy</button>
-        <button id="androidScreenCopyPayload" class="copybutton">payload</button>
-      </div>
-      <div class="events" id="androidEvent">
-        <div class="headerlink">
-          <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
-        </div>
-        <input type="hidden"
-          value='analytics.identify("id_987000", new Traits() .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540") .putValue("email", "test@test.test") .putValue("userId", "id_987000"));'
-          id="androidIdentifyEvent">
-        <input type="hidden"
-          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": “test@test.test”, "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "integrations": {}, "messageId": "b7b5bf66-2cc1-466e-af7d-989e647ec673", "originalTimestamp": "2019-10-02T02:00:02.964Z", "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-02T02:00:02.659Z", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "type": "identify", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
-          id="androidIdentifyPayload">
-        <code>
-              analytics.identify("id_987000", new Traits()
-              .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540")
-              .putValue("email", "test@test.test")
-              .putValue("userId", "id_987000"));
-            </code>
-        <button id="androidIdentifyCopy" class="copybutton">copy</button>
-        <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
-      </div>
-      <div class="events" id="androidEvent">
-        <div class="headerlink">
-          <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
-        </div>
-        <input type="hidden"
-          value='analytics.track("Application Opened", new Properties() .putValue("from_background", true));'
-          id="androidTrackEvent">
-        <input type="hidden"
-          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "event": "Application Opened", "integrations": {}, "messageId": "36bcbff0-2845-469e-92a8-8ace580ca87f", "originalTimestamp": "2019-10-01T23:03:48.985Z", "properties": { "from_background": true }, "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-01T23:03:48.680Z", "type": "track", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
-          id="androidTrackPayload">
-        <code>
-              analytics.track("Application Opened", new Properties()
-              .putValue("from_background", true));
-              </code>
-        <button id="androidTrackCopy" class="copybutton">copy</button>
-        <button id="androidTrackCopyPayload" class="copybutton">payload</button>
-      </div>
-      <div class="events" id="androidEvent">
-        <div class="headerlink">
-          <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
-        </div>
-        <input type="hidden"
-          value='Analytics.with(context).group("a users id", "a group id", new Traits().putEmployees(20));'
-          id="androidGroupEvent">
-        <code>
-              Analytics.with(context).group("a user's id", "a group id", 
-              new Traits().putEmployees(20));
-        </code>
-        <button id="androidGroupCopy" class="copybutton">copy</button>
-      </div>
-      <div class="events" id="androidEvent">
-        <div class="headerlink">
-          <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
-        </div>
-        <input type="hidden" value='Analytics.with(context).alias(newId) Analytics.with(context).identify(newId);'
-          id="androidAliasEvent">
-        <code>
-              Analytics.with(context).alias(newId)
-              Analytics.with(context).identify(newId);
-          </code>
-        <button id="androidAliasCopy" class="copybutton">copy</button>
-      </div>
-      <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#screen" target=_blank>Screen</a></h3>
-          </div>
-          <input type="hidden" value='[[SEGAnalytics sharedAnalytics] screen:@"Photo Feed" properties:@{ @"Feed Type": @"private" }];'
-            id="iosScreenEvent">
-          <code>
-              [[SEGAnalytics sharedAnalytics] screen:@"Photo Feed"
-              properties:@{ @"Feed Type": @"private" }];
-            </code>
-          <button id="iosScreenCopy" class="copybutton">copy</button>
-        </div>
-        <div class="events" id="iosEvent">
-            <div class="headerlink">
-              <h3><a href="https://segment.com/docs/sources/mobile/ios/#identify" target=_blank>Identify</a></h3>
+      <div id='android-display'>
+          <div class="events" id="androidEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
+              </div>
+              <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));'
+                id="androidScreenEvent">
+              <input type="hidden"
+                value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }'
+                id="androidScreenPayload">
+              <code>
+                  analytics.screen("Question", new Properties() .putValue("question_id", "479581"));
+                </code>
+              <button id="androidScreenCopy" class="copybutton">copy</button>
+              <button id="androidScreenCopyPayload" class="copybutton">payload</button>
             </div>
-            <input type="hidden" value='[[SEGAnalytics sharedAnalytics] identify:@"a users id" traits:@{ @"email": @"a users email address" }];'
-              id="iosIdentifyEvent">
-            <code>
-                [[SEGAnalytics sharedAnalytics] identify:@"a user's id"
-                traits:@{ @"email": @"a user's email address" }];
+            <div class="events" id="androidEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
+              </div>
+              <input type="hidden"
+                value='analytics.identify("id_987000", new Traits() .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540") .putValue("email", "test@test.test") .putValue("userId", "id_987000"));'
+                id="androidIdentifyEvent">
+              <input type="hidden"
+                value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": “test@test.test”, "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "integrations": {}, "messageId": "b7b5bf66-2cc1-466e-af7d-989e647ec673", "originalTimestamp": "2019-10-02T02:00:02.964Z", "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-02T02:00:02.659Z", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "type": "identify", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+                id="androidIdentifyPayload">
+              <code>
+                    analytics.identify("id_987000", new Traits()
+                    .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540")
+                    .putValue("email", "test@test.test")
+                    .putValue("userId", "id_987000"));
+                  </code>
+              <button id="androidIdentifyCopy" class="copybutton">copy</button>
+              <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
+            </div>
+            <div class="events" id="androidEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
+              </div>
+              <input type="hidden"
+                value='analytics.track("Application Opened", new Properties() .putValue("from_background", true));'
+                id="androidTrackEvent">
+              <input type="hidden"
+                value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "event": "Application Opened", "integrations": {}, "messageId": "36bcbff0-2845-469e-92a8-8ace580ca87f", "originalTimestamp": "2019-10-01T23:03:48.985Z", "properties": { "from_background": true }, "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-01T23:03:48.680Z", "type": "track", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+                id="androidTrackPayload">
+              <code>
+                    analytics.track("Application Opened", new Properties()
+                    .putValue("from_background", true));
+                    </code>
+              <button id="androidTrackCopy" class="copybutton">copy</button>
+              <button id="androidTrackCopyPayload" class="copybutton">payload</button>
+            </div>
+            <div class="events" id="androidEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
+              </div>
+              <input type="hidden"
+                value='Analytics.with(context).group("a users id", "a group id", new Traits().putEmployees(20));'
+                id="androidGroupEvent">
+              <code>
+                    Analytics.with(context).group("a user's id", "a group id", 
+                    new Traits().putEmployees(20));
               </code>
-            <button id="iosIdentifyCopy" class="copybutton">copy</button>
-          </div>
+              <button id="androidGroupCopy" class="copybutton">copy</button>
+            </div>
+            <div class="events" id="androidEvent">
+              <div class="headerlink">
+                <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
+              </div>
+              <input type="hidden" value='Analytics.with(context).alias(newId) Analytics.with(context).identify(newId);'
+                id="androidAliasEvent">
+              <code>
+                    Analytics.with(context).alias(newId)
+                    Analytics.with(context).identify(newId);
+                </code>
+              <button id="androidAliasCopy" class="copybutton">copy</button>
+            </div>
+      </div>
+      <div id='ios-display'>
           <div class="events" id="iosEvent">
               <div class="headerlink">
-                <h3><a href="https://segment.com/docs/sources/mobile/ios/#track" target=_blank>Track</a></h3>
+                <h3><a href="https://segment.com/docs/sources/mobile/ios/#screen" target=_blank>Screen</a></h3>
               </div>
-              <input type="hidden" value='[[SEGAnalytics sharedAnalytics] track:@"Item Purchased" properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];'
-                id="iosTrackEvent">
+              <input type="hidden" value='[[SEGAnalytics sharedAnalytics] screen:@"Photo Feed" properties:@{ @"Feed Type": @"private" }];'
+                id="iosScreenEvent">
               <code>
-                  [[SEGAnalytics sharedAnalytics] track:@"Item Purchased"
-                   properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];
+                  [[SEGAnalytics sharedAnalytics] screen:@"Photo Feed"
+                  properties:@{ @"Feed Type": @"private" }];
                 </code>
-              <button id="iosTrackCopy" class="copybutton">copy</button>
+              <button id="iosScreenCopy" class="copybutton">copy</button>
             </div>
             <div class="events" id="iosEvent">
                 <div class="headerlink">
-                  <h3><a href="https://segment.com/docs/sources/mobile/ios/#group" target=_blank>Group</a></h3>
+                  <h3><a href="https://segment.com/docs/sources/mobile/ios/#identify" target=_blank>Identify</a></h3>
                 </div>
-                <input type="hidden" value='[[SEGAnalytics sharedAnalytics] group:@"group123" traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];'
-                  id="iosGroupEvent">
+                <input type="hidden" value='[[SEGAnalytics sharedAnalytics] identify:@"a users id" traits:@{ @"email": @"a users email address" }];'
+                  id="iosIdentifyEvent">
                 <code>
-                    [[SEGAnalytics sharedAnalytics] group:@"group123"
-                    traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];
+                    [[SEGAnalytics sharedAnalytics] identify:@"a user's id"
+                    traits:@{ @"email": @"a user's email address" }];
                   </code>
-                <button id="iosGroupCopy" class="copybutton">copy</button>
+                <button id="iosIdentifyCopy" class="copybutton">copy</button>
               </div>
               <div class="events" id="iosEvent">
                   <div class="headerlink">
-                    <h3><a href="https://segment.com/docs/sources/mobile/ios/#alias" target=_blank>Alias</a></h3>
+                    <h3><a href="https://segment.com/docs/sources/mobile/ios/#track" target=_blank>Track</a></h3>
                   </div>
-                  <input type="hidden" value='[[SEGAnalytics sharedAnalytics] alias:@"some new id"];'
-                    id="iosAliasEvent">
+                  <input type="hidden" value='[[SEGAnalytics sharedAnalytics] track:@"Item Purchased" properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];'
+                    id="iosTrackEvent">
                   <code>
-                      [[SEGAnalytics sharedAnalytics] alias:@"some new id"];
+                      [[SEGAnalytics sharedAnalytics] track:@"Item Purchased"
+                       properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];
                     </code>
-                  <button id="iosAliasCopy" class="copybutton">copy</button>
+                  <button id="iosTrackCopy" class="copybutton">copy</button>
                 </div>
+                <div class="events" id="iosEvent">
+                    <div class="headerlink">
+                      <h3><a href="https://segment.com/docs/sources/mobile/ios/#group" target=_blank>Group</a></h3>
+                    </div>
+                    <input type="hidden" value='[[SEGAnalytics sharedAnalytics] group:@"group123" traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];'
+                      id="iosGroupEvent">
+                    <code>
+                        [[SEGAnalytics sharedAnalytics] group:@"group123"
+                        traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];
+                      </code>
+                    <button id="iosGroupCopy" class="copybutton">copy</button>
+                  </div>
+                  <div class="events" id="iosEvent">
+                      <div class="headerlink">
+                        <h3><a href="https://segment.com/docs/sources/mobile/ios/#alias" target=_blank>Alias</a></h3>
+                      </div>
+                      <input type="hidden" value='[[SEGAnalytics sharedAnalytics] alias:@"some new id"];'
+                        id="iosAliasEvent">
+                      <code>
+                          [[SEGAnalytics sharedAnalytics] alias:@"some new id"];
+                        </code>
+                      <button id="iosAliasCopy" class="copybutton">copy</button>
+                    </div>
+      </div>
     </div>
 
     <div id="links" class="tabcontent">

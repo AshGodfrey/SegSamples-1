@@ -163,20 +163,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 //Dropdown logic
 document.addEventListener("DOMContentLoaded", function (event) {
-  document.getElementById("dropBoxSelectOs").addEventListener("change", search_events);
+  document.getElementById("switch-field").addEventListener("change", radioChanged);
 
-  function search_events() {
-    let input = document.getElementById('dropBoxSelectOs').value
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName('events');
-
-    for (i = 0; i < x.length; i++) {
-      if (!x[i].id.toLowerCase().includes(input)) {
-        x[i].style.display = "none";
-      }
-      else {
-        x[i].style.display = "block";
-      }
+  function radioChanged(){
+    let selectedValue = document.querySelector('input[name="switch-one"]:checked').value;
+    if(selectedValue === 'android')
+    {
+        document.getElementById('ios-display').style.display='none';
+        document.getElementById('android-display').style.display='initial';
+    }
+    else if(selectedValue === 'ios')
+    {
+        document.getElementById('android-display').style.display='none';
+        document.getElementById('ios-display').style.display='initial';
     }
   }
 });
