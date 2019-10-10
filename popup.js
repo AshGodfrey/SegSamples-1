@@ -86,6 +86,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
   iosTrack.addEventListener('click', () => copyStringToClipboard("iosTrackEvent"), false);
   iosGroup.addEventListener('click', () => copyStringToClipboard("iosGroupEvent"), false);
   iosAlias.addEventListener('click', () => copyStringToClipboard("iosAliasEvent"), false);
+
+      //************Node.js************\\
+  //Event Examples
+  var nodejsPage = document.getElementById('nodeJsPageCopy');
+  var nodejsIdentify = document.getElementById('nodeJsIdentifyCopy');
+  var nodejsTrack = document.getElementById('nodeJsTrackCopy');
+  var nodejsGroup = document.getElementById('nodeJsGroupCopy');
+  var nodejsAlias = document.getElementById('nodeJsAliasCopy');
+
+  nodejsPage.addEventListener('click', () => copyStringToClipboard("nodejsPageEvent"), false);
+  nodejsIdentify.addEventListener('click', () => copyStringToClipboard("nodejsIdentifyEvent"), false);
+  nodejsTrack.addEventListener('click', () => copyStringToClipboard("nodejsTrackEvent"), false);
+  nodejsGroup.addEventListener('click', () => copyStringToClipboard("nodejsGroupEvent"), false);
+  nodejsAlias.addEventListener('click', () => copyStringToClipboard("nodejsAliasEvent"), false);
+
+  //************Java************\\
+  //Event Examples
+  var javaPage = document.getElementById('javaPageCopy');
+  var javaScreen = document.getElementById('javaScreenCopy');
+  var javaIdentify = document.getElementById('javaIdentifyCopy');
+  var javaTrack = document.getElementById('javaTrackCopy');
+  var javaGroup = document.getElementById('javaGroupCopy');
+  var javaAlias = document.getElementById('javaAliasCopy');
+
+
+  javaPage.addEventListener('click', () => copyStringToClipboard("javaPageEvent"), false);
+  javaScreen.addEventListener('click', () => copyStringToClipboard("javaScreenEvent"), false);
+  javaIdentify.addEventListener('click', () => copyStringToClipboard("javaIdentifyEvent"), false);
+  javaTrack.addEventListener('click', () => copyStringToClipboard("javaTrackEvent"), false);
+  javaGroup.addEventListener('click', () => copyStringToClipboard("javaGroupEvent"), false);
+  javaAlias.addEventListener('click', () => copyStringToClipboard("javaAliasEvent"), false);
 });
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -121,7 +152,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("server").addEventListener("click", openPage, false);
 
+  function openPage() {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Show the specific tab content
+    document.getElementById('Server').style.display = "block";
+    document.getElementById("server").click();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("usefulLinks").addEventListener("click", openPage, false);
@@ -161,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 
-//Dropdown logic
+//Dropdown logic mobile
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("switch-field").addEventListener("change", radioChanged);
 
@@ -176,6 +222,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     {
         document.getElementById('android-display').style.display='none';
         document.getElementById('ios-display').style.display='initial';
+    }
+  }
+});
+
+//Dropdown logic server
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("switch-fieldServer").addEventListener("change", radioChanged);
+
+  function radioChanged(){
+    let selectedValue = document.querySelector('input[name="switch-a"]:checked').value;
+    if(selectedValue === 'java')
+    {
+      document.getElementById('nodejs-display').style.display='none';
+      document.getElementById('java-display').style.display='initial';
+    }
+    else if(selectedValue === 'nodejs')
+    {
+        document.getElementById('java-display').style.display='none';
+        document.getElementById('nodejs-display').style.display='initial';
     }
   }
 });
