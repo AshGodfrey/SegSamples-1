@@ -124,7 +124,7 @@
     <div id="Mobile" class="tabcontent">
       <form class="form">
         <div id="switch-field">
-          <input type="radio" id="radio-one" name="switch-one" value="android" checked/>
+          <input type="radio" id="radio-one" name="switch-one" value="android" checked />
           <label for="radio-one">Android</label>
           <input type="radio" id="radio-two" name="switch-one" value="ios" />
           <label for="radio-two">iOS</label>
@@ -279,10 +279,10 @@
     <div id="Server" class="tabcontent">
       <form class="form">
         <div id="switch-fieldServer">
-          <input type="radio" id="radio-one" name="switch-a" value="nodejs" checked />
-          <label for="radio-one">Node.js</label>
-          <input type="radio" id="radio-two" name="switch-a" value="java" />
-          <label for="radio-two">Java</label>
+          <input type="radio" id="radio-node" name="switch-a" value="nodejs" checked />
+          <label for="radio-node">Node.js</label>
+          <input type="radio" id="radio-java" name="switch-a" value="java" />
+          <label for="radio-java">Java</label>
         </div>
       </form>
 
@@ -461,13 +461,13 @@
           <button id="javaTrackCopy" class="copybutton">copy</button>
         </div>
         <div class="events" id="javaEvent">
-            <div class="headerlink">
-              <h3><a href="https://segment.com/docs/sources/server/java/#group" target=_blank>Group</a></h3>
-            </div>
-            <input type="hidden"
-              value="analytics.enqueue(GroupMessage.builder('some-group-id') .userId('f4ca12429') .traits(ImmutableMap.builder() .put('name', 'Segment') .put('size', 50) .build() ) );"
-              id="javaGroupEvent">
-            <code>
+          <div class="headerlink">
+            <h3><a href="https://segment.com/docs/sources/server/java/#group" target=_blank>Group</a></h3>
+          </div>
+          <input type="hidden"
+            value="analytics.enqueue(GroupMessage.builder('some-group-id') .userId('f4ca12429') .traits(ImmutableMap.builder() .put('name', 'Segment') .put('size', 50) .build() ) );"
+            id="javaGroupEvent">
+          <code>
                 analytics.enqueue(GroupMessage.builder("some-group-id")
                 .userId("f4ca124298")
                 .traits(ImmutableMap.builder()
@@ -477,22 +477,21 @@
                 )
             );
                         </code>
-            <button id="javaGroupCopy" class="copybutton">copy</button>
+          <button id="javaGroupCopy" class="copybutton">copy</button>
+        </div>
+        <div class="events" id="javaEvent">
+          <div class="headerlink">
+            <h3><a href="https://segment.com/docs/sources/server/java/#alias" target=_blank>Alias</a></h3>
           </div>
-          <div class="events" id="javaEvent">
-              <div class="headerlink">
-                <h3><a href="https://segment.com/docs/sources/server/java/#alias" target=_blank>Alias</a></h3>
-              </div>
-              <input type="hidden"
-                value="analytics.enqueue(AliasMessage.builder('previousId') .userId('f4ca124298') );"
-                id="javaAliasEvent">
-              <code>
+          <input type="hidden" value="analytics.enqueue(AliasMessage.builder('previousId') .userId('f4ca124298') );"
+            id="javaAliasEvent">
+          <code>
                   analytics.enqueue(AliasMessage.builder("previousId")
                     .userId("f4ca124298")
                 );
                           </code>
-              <button id="javaAliasCopy" class="copybutton">copy</button>
-            </div>
+          <button id="javaAliasCopy" class="copybutton">copy</button>
+        </div>
       </div>
     </div>
 
@@ -546,14 +545,62 @@
       </ul>
 
       <div class="headerlink">
-        <h3>A third Section</h3>
+        <h3>Dev Center</h3>
       </div>
       <ul class="linkul">
-        <li><a href="">Segment University</a></li>
-        <li><a href="">Test One</a></li>
-        <li>
-          <a href="https://segment.com/docs/spec/common/" target=_blank>Common Spec</a>
-        </li>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://paper.dropbox.com/doc/Developer-Center-Guide-for-Success--Ag~isIQ6jaVbPF7rQBeKxD9xAg-v9PMf76YPYxgGTIVOTThj"
+              target=_blank>Dev Center Guide for Success</a>
+            <span class="tooltiptext">This is the master guide for Dev Center</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://paper.dropbox.com/doc/Developer-Center-Macros--AmfzLRpbaLWQCOIWbN_5C2e1Ag-upmhirSrwWjVql6UrGWfm"
+              target=_blank>Dev Center Macros</a>
+            <span class="tooltiptext">Dev Center Zendesk Macros</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://hackmd.io/t7amLXluS7-39rg7ARZgSA?view" target=_blank>Segment Doc Template</a>
+            <span class="tooltiptext">Segment documentation template</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://segment.com/docs/partners/build-webhook/?origin_team=T026HRLC7#status-code"
+              target=_blank>Status Codes</a>
+            <span class="tooltiptext">The required status codes</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://segment.com/docs/partners/?origin_team=T026HRLC7#post-launch" target=_blank>Post-Launch
+              Requirements</a>
+            <span class="tooltiptext">The post-launch requirements for an integration to go into a public state</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://www.contents.io/teams/segment/collections/integrations" target=_blank>Contents.io</a>
+            <span class="tooltiptext">Contents.io used to build catalog entries</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://app.segment.com/partner-portal/integration/" target=_blank>Partner-Portal</a>
+            <span class="tooltiptext">Used to read and write an integrations settings</span>
+          </li>
+        </div>
+        <div class="events">
+          <li class="tooltip">
+            <a href="https://docs.google.com/document/d/1kvAvAHLyM3pOq-lBcZJhP_X_KivHlk1eiFy-5ERWDXc/edit"
+              target=_blank>Catalog Template</a>
+            <span class="tooltiptext">Segment catalog template</span>
+          </li>
+        </div>
       </ul>
 
       <div class="headerlink">
