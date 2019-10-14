@@ -195,13 +195,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
     let x = document.getElementsByClassName('events');
+    let y = document.getElementsByClassName('linkheader');
 
-    for (i = 0; i < x.length; i++) {
-      if (!x[i].innerText.toLowerCase().includes(input)) {
-        x[i].style.display = "none";
+    if(input.length !== 0){
+      for (i = 0; i < y.length; i++){
+        y[i].style.display="none";
       }
-      else {
-        x[i].style.display = "block";
+      for (i = 0; i < x.length; i++) {
+        if (!x[i].innerText.toLowerCase().includes(input)) {
+          x[i].style.display = "none";
+        }
+      }
+    } else {
+      for (a = 0; a < y.length; a++){
+        y[a].style.display="block";
+      }
+      for(i=0; i < x.length; i++){
+        x[i].style.display="block";
       }
     }
   }
