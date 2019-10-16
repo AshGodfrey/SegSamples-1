@@ -187,6 +187,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("q3button").addEventListener("click", openPage, false);
+
+  function openPage() {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Show the specific tab content
+    document.getElementById('q3').style.display = "block";
+  }
+});
+
+
 //Search box logic
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("searchbar").addEventListener("keyup", search_events);
