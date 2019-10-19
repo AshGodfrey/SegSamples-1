@@ -271,3 +271,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+
+//Event Builder
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("eventBuilder").addEventListener("click", eventBuilder);
+
+  function eventBuilder() {
+    let eventName = document.getElementById('eventName').value
+    let actualEvent = document.getElementById('muhCode').value
+    let x = document.querySelector("#muhCode > code")
+
+    let properties = document.getElementById('container')
+    numberOfPropertie = properties.children.length;
+    var props = new Array();
+
+    for(i=0;i<numberOfPropertie;i++){
+      if(properties.children[i].value != null){
+        props.push(properties.children[i].value);
+      }
+    }
+
+    var filteredProps = props.filter(Boolean);
+    //analytics.page("Home", {prop1: "test1", prop2:"test2"});
+
+    //x.innerHTML = "analytics.page(\"" + eventName + "\"" +", \{"+ filteredProps[0] + ":" + "\"" + filteredProps[1] + "\"" + ", " + filteredProps[2] + ":" + "\"" + filteredProps[3] + "\""
+
+    let message = "analytics.page(\"" + eventName + "\"" +", \{";
+    for (let index = 0; index < filteredProps.length; index += 2) {
+      message += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+  }
+  submessage = message.substring(0, message.length - 1)
+    x.innerHTML = submessage + "});";
+  }
+});
+
+//Event Property Builder
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("fillDetail").addEventListener("click", addFields);
+
+  function addFields(){
+    var number = document.getElementById("member").value;
+    var container = document.getElementById("container");
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+    for (i=0;i<number;i++){
+        var input = document.createElement("input");
+        var input1 = document.createElement("input");
+        input.type = "text";
+        input1.type = "text";
+        container.appendChild(input);
+        container.appendChild(input1);
+        container.appendChild(document.createElement("br"));
+    }
+}
+});
