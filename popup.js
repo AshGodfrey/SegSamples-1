@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   androidPayloadTrack.addEventListener('click', () => copyStringToClipboard("androidTrackPayload"), false);
 
 
-    //************iOS************\\
+  //************iOS************\\
   //Event Examples
   var iosScreen = document.getElementById('iosScreenCopy');
   var iosIdentify = document.getElementById('iosIdentifyCopy');
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   iosGroup.addEventListener('click', () => copyStringToClipboard("iosGroupEvent"), false);
   iosAlias.addEventListener('click', () => copyStringToClipboard("iosAliasEvent"), false);
 
-      //************Node.js************\\
+  //************Node.js************\\
   //Event Examples
   var nodejsPage = document.getElementById('nodeJsPageCopy');
   var nodejsIdentify = document.getElementById('nodeJsIdentifyCopy');
@@ -214,9 +214,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let x = document.getElementsByClassName('events');
     let y = document.getElementsByClassName('linkheader');
 
-    if(input.length !== 0){
-      for (i = 0; i < y.length; i++){
-        y[i].style.display="none";
+    if (input.length !== 0) {
+      for (i = 0; i < y.length; i++) {
+        y[i].style.display = "none";
       }
       for (i = 0; i < x.length; i++) {
         if (!x[i].innerText.toLowerCase().includes(input)) {
@@ -224,11 +224,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
       }
     } else {
-      for (a = 0; a < y.length; a++){
-        y[a].style.display="block";
+      for (a = 0; a < y.length; a++) {
+        y[a].style.display = "block";
       }
-      for(i=0; i < x.length; i++){
-        x[i].style.display="block";
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
       }
     }
   }
@@ -238,17 +238,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("switch-field").addEventListener("change", radioChanged);
 
-  function radioChanged(){
+  function radioChanged() {
     let selectedValue = document.querySelector('input[name="switch-one"]:checked').value;
-    if(selectedValue === 'android')
-    {
-        document.getElementById('ios-display').style.display='none';
-        document.getElementById('android-display').style.display='initial';
+    if (selectedValue === 'android') {
+      document.getElementById('ios-display').style.display = 'none';
+      document.getElementById('android-display').style.display = 'initial';
     }
-    else if(selectedValue === 'ios')
-    {
-        document.getElementById('android-display').style.display='none';
-        document.getElementById('ios-display').style.display='initial';
+    else if (selectedValue === 'ios') {
+      document.getElementById('android-display').style.display = 'none';
+      document.getElementById('ios-display').style.display = 'initial';
     }
   }
 });
@@ -257,17 +255,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("switch-fieldServer").addEventListener("change", radioChanged);
 
-  function radioChanged(){
+  function radioChanged() {
     let selectedValue = document.querySelector('input[name="switch-a"]:checked').value;
-    if(selectedValue === 'java')
-    {
-      document.getElementById('nodejs-display').style.display='none';
-      document.getElementById('java-display').style.display='initial';
+    if (selectedValue === 'java') {
+      document.getElementById('nodejs-display').style.display = 'none';
+      document.getElementById('java-display').style.display = 'initial';
     }
-    else if(selectedValue === 'nodejs')
-    {
-        document.getElementById('java-display').style.display='none';
-        document.getElementById('nodejs-display').style.display='initial';
+    else if (selectedValue === 'nodejs') {
+      document.getElementById('java-display').style.display = 'none';
+      document.getElementById('nodejs-display').style.display = 'initial';
     }
   }
 });
@@ -280,49 +276,120 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let eventName = document.getElementById('eventName').value
     let actualEvent = document.getElementById('muhCode').value
     let x = document.querySelector("#muhCode > code")
+    let eventDropDown = document.getElementById('dropDownSelectEventType').value
+    eventDropDown = eventDropDown.toLowerCase();
 
     let properties = document.getElementById('container')
     numberOfPropertie = properties.children.length;
     var props = new Array();
 
-    for(i=0;i<numberOfPropertie;i++){
-      if(properties.children[i].value != null){
+    for (i = 0; i < numberOfPropertie; i++) {
+      if (properties.children[i].value != null) {
         props.push(properties.children[i].value);
       }
     }
 
     var filteredProps = props.filter(Boolean);
     //analytics.page("Home", {prop1: "test1", prop2:"test2"});
+    //analytics.identify("97980cfea0067", { name: "Peter Gibbons", email: "peter@initech.com"});
+    //analytics.track("Registered", { plan: "Pro Annual", accountType: "Facebook" });
+    //analytics.group("0e8c78ea9d97a7b8185e8632", { name: "Initech", industry: "Technology"});
+    //analytics.alias("507f191e81");
+    let input = document.getElementById('dropDownSelectEventType').value
+    input = input.toLowerCase();
 
-    //x.innerHTML = "analytics.page(\"" + eventName + "\"" +", \{"+ filteredProps[0] + ":" + "\"" + filteredProps[1] + "\"" + ", " + filteredProps[2] + ":" + "\"" + filteredProps[3] + "\""
+    let messagePage = "analytics.page(\"" + eventName + "\"" + ", \{";
+    let messagePageNoProps = "analytics.page(\"" + eventName + "\");";
+    let messageIdentify = "analytics.identify(\"" + eventName + "\"" + ", \{";
+    let messageTrack = "analytics.track(\"" + eventName + "\"" + ", \{";
+    let messageGroup = "analytics.group(\"" + eventName + "\"" + ", \{";
+    let messageAlias = "analytics.alias(\"" + eventName + "\"";
 
-    let message = "analytics.page(\"" + eventName + "\"" +", \{";
-    for (let index = 0; index < filteredProps.length; index += 2) {
-      message += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+    if (input == "page") {
+      if(filteredProps.length == 0){
+        x.innerHTML = messagePageNoProps;
+      }
+      else if(filteredProps.length > 0){
+        for (let index = 0; index < filteredProps.length; index += 2) {
+          messagePage += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+          submessage = messagePage.substring(0, messagePage.length - 1)
+          x.innerHTML = submessage + "});";
+        }
+      }
+    }
+    else if (input == "identify") {
+      for (let index = 0; index < filteredProps.length; index += 2) {
+        messageIdentify += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+        submessage = messageIdentify.substring(0, messageIdentify.length - 1)
+        x.innerHTML = submessage + "});";
+      }
+    }
+    else if (input == "track") {
+      for (let index = 0; index < filteredProps.length; index += 2) {
+        messageTrack += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+        submessage = messageTrack.substring(0, messageTrack.length - 1)
+        x.innerHTML = submessage + "});";
+      }
+    }
+    else if (input == "group") {
+      for (let index = 0; index < filteredProps.length; index += 2) {
+        messageGroup += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
+        submessage = messageGroup.substring(0, messageGroup.length - 1)
+        x.innerHTML = submessage + "});";
+      }
+    }
+    else if (input == "alias") {
+        x.innerHTML = messageAlias + "});";  
+    }
   }
-  submessage = message.substring(0, message.length - 1)
-    x.innerHTML = submessage + "});";
-  }
+
 });
 
 //Event Property Builder
 document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("fillDetail").addEventListener("click", addFields);
 
-  function addFields(){
+  function addFields() {
     var number = document.getElementById("member").value;
     var container = document.getElementById("container");
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
+      container.removeChild(container.lastChild);
     }
-    for (i=0;i<number;i++){
-        var input = document.createElement("input");
-        var input1 = document.createElement("input");
-        input.type = "text";
-        input1.type = "text";
-        container.appendChild(input);
-        container.appendChild(input1);
-        container.appendChild(document.createElement("br"));
+    for (i = 0; i < number; i++) {
+      var input = document.createElement("input");
+      var input1 = document.createElement("input");
+      input.type = "text";
+      input1.type = "text";
+      container.appendChild(input);
+      container.appendChild(input1);
+      container.appendChild(document.createElement("br"));
     }
-}
+  }
+});
+
+//Dropdown logic
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("dropDownSelectEventType").addEventListener("change", search_events);
+
+  function search_events() {
+    let input = document.getElementById('dropDownSelectEventType').value
+    input = input.toLowerCase();
+
+    if (input == "identify" || input == "group") {
+      document.getElementById('member').placeholder = "Number of traits";
+      document.getElementById('fillDetail').innerText = "Add Traits"
+      document.getElementById('member').style.display = "inline-block";
+      document.getElementById('fillDetail').style.display = "inline-block"
+    }
+    else if (input == "page" || input == "track") {
+      document.getElementById('member').placeholder = "Number of properties";
+      document.getElementById('fillDetail').innerText = "Add Properties"
+      document.getElementById('member').style.display = "inline-block";
+      document.getElementById('fillDetail').style.display = "inline-block"
+    }
+    else if (input == "alias") {
+      document.getElementById('member').style.display = "none";
+      document.getElementById('fillDetail').style.display = "none"
+    }
+  }
 });

@@ -123,197 +123,207 @@
       <div class="events">
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/spec/alias/" target=_blank>Event Builder</a></h3>
-          <input type="text" name="Event Name" id="eventName" value="" placeholder="Event name"><br>    
+
+          <select id="dropDownSelectEventType">
+            <option value="page">Page</option>
+            <option value="identify">Identify</option>
+            <option value="track">Track</option>
+            <option value="group">Group</option>
+            <option value="alias">Alias</option>
+          </select>
+          <br>
+
+          <input type="text" name="Event Name" id="eventName" value="" placeholder="Event name"><br>
 
           <input type="text" id="member" name="member" value="" placeholder="Number of properties"><br />
           <button class="tabbutton1" id="fillDetail">Add Properties</button>
-          <div id="container"/>
+          <div id="container" />
 
         </div>
         <div id="muhCode">
-        <code>
-            
+          <code>
+
           </code>
           <button class="tabbutton1" id="eventBuilder">Build</button>
-          </div>
+        </div>
       </div>
-
     </div>
 
-    <div id="Mobile" class="tabcontent">
-      <form class="form">
-        <div id="switch-field">
-          <input type="radio" id="radio-one" name="switch-one" value="android" checked />
-          <label for="radio-one">Android</label>
-          <input type="radio" id="radio-two" name="switch-one" value="ios" />
-          <label for="radio-two">iOS</label>
-        </div>
-      </form>
+  </div>
 
-      <div id='android-display'>
-        <div class="events" id="androidEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
-          </div>
-          <input type="hidden"
-            value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));'
-            id="androidScreenEvent">
-          <input type="hidden"
-            value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }'
-            id="androidScreenPayload">
-          <code>
+  <div id="Mobile" class="tabcontent">
+    <form class="form">
+      <div id="switch-field">
+        <input type="radio" id="radio-one" name="switch-one" value="android" checked />
+        <label for="radio-one">Android</label>
+        <input type="radio" id="radio-two" name="switch-one" value="ios" />
+        <label for="radio-two">iOS</label>
+      </div>
+    </form>
+
+    <div id='android-display'>
+      <div class="events" id="androidEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/spec/screen/" target=_blank>Screen</a></h3>
+        </div>
+        <input type="hidden" value='analytics.screen("Question", new Properties() .putValue("question_id", "479581"));'
+          id="androidScreenEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "context": { "app": { "build": 118, "name": "1DOC3", "namespace": "com.app1doc3.app1doc3", "version": "7.0.10" }, "device": { "type": "android", "adTrackingEnabled": true, "advertisingId": "2b013d75-eb5c-4011-9a19-743d8a8ead53", "id": "d6851545e4e13177", "manufacturer": "motorola", "model": "Moto G (5)", "name": "cedric" }, "ip": "186.145.59.137", "library": { "name": "analytics-android", "version": "4.3.1" }, "locale": "es-US", "network": { "bluetooth": false, "carrier": "Avantel 4G LTE", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "8.1.0" }, "screen": { "density": 3, "height": 1776, "width": 1080 }, "timezone": "America/Bogota", "traits": { "anonymousId": "63df92cf-ee54-4bd4-ac03-44acd9fd9486", "email": "diegorp-94@hotmail.com", "userId": "384563" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Moto G (5) Build/OPPS28.85-13-6)" }, "integrations": { "Firebase": false }, "messageId": "5a9d9cf7-29f3-4a1d-92ea-fd57b675ea6c", "name": "Question", "originalTimestamp": "2019-10-07T08:48:51.174Z", "properties": { "question_id": "479581" }, "receivedAt": "2019-10-07T08:49:01.967Z", "sentAt": "2019-10-07T08:49:00.856Z", "timestamp": "2019-10-07T08:48:52.285Z", "type": "screen", "userId": "384563", "writeKey": "VYyvLQWkiHxLINvajeD2WC2GyNCqkt0O" }'
+          id="androidScreenPayload">
+        <code>
                   analytics.screen("Question", new Properties() .putValue("question_id", "479581"));
                 </code>
-          <button id="androidScreenCopy" class="copybutton">copy</button>
-          <button id="androidScreenCopyPayload" class="copybutton">payload</button>
+        <button id="androidScreenCopy" class="copybutton">copy</button>
+        <button id="androidScreenCopyPayload" class="copybutton">payload</button>
+      </div>
+      <div class="events" id="androidEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
         </div>
-        <div class="events" id="androidEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/android/#identify" target=_blank>Identify</a></h3>
-          </div>
-          <input type="hidden"
-            value='analytics.identify("id_987000", new Traits() .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540") .putValue("email", "test@test.test") .putValue("userId", "id_987000"));'
-            id="androidIdentifyEvent">
-          <input type="hidden"
-            value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": “test@test.test”, "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "integrations": {}, "messageId": "b7b5bf66-2cc1-466e-af7d-989e647ec673", "originalTimestamp": "2019-10-02T02:00:02.964Z", "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-02T02:00:02.659Z", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "type": "identify", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
-            id="androidIdentifyPayload">
-          <code>
+        <input type="hidden"
+          value='analytics.identify("id_987000", new Traits() .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540") .putValue("email", "test@test.test") .putValue("userId", "id_987000"));'
+          id="androidIdentifyEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": “test@test.test”, "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "integrations": {}, "messageId": "b7b5bf66-2cc1-466e-af7d-989e647ec673", "originalTimestamp": "2019-10-02T02:00:02.964Z", "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-02T02:00:02.659Z", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "type": "identify", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+          id="androidIdentifyPayload">
+        <code>
                     analytics.identify("id_987000", new Traits()
                     .putValue("anonymousId", "ccc8ccca-d394-4321-bb1d-bf61bd5ba540")
                     .putValue("email", "test@test.test")
                     .putValue("userId", "id_987000"));
                   </code>
-          <button id="androidIdentifyCopy" class="copybutton">copy</button>
-          <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
+        <button id="androidIdentifyCopy" class="copybutton">copy</button>
+        <button id="androidIdentifyCopyPayload" class="copybutton">payload</button>
+      </div>
+      <div class="events" id="androidEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
         </div>
-        <div class="events" id="androidEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/android/#track" target=_blank>Track</a></h3>
-          </div>
-          <input type="hidden"
-            value='analytics.track("Application Opened", new Properties() .putValue("from_background", true));'
-            id="androidTrackEvent">
-          <input type="hidden"
-            value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "event": "Application Opened", "integrations": {}, "messageId": "36bcbff0-2845-469e-92a8-8ace580ca87f", "originalTimestamp": "2019-10-01T23:03:48.985Z", "properties": { "from_background": true }, "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-01T23:03:48.680Z", "type": "track", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
-            id="androidTrackPayload">
-          <code>
+        <input type="hidden"
+          value='analytics.track("Application Opened", new Properties() .putValue("from_background", true));'
+          id="androidTrackEvent">
+        <input type="hidden"
+          value='{ "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "context": { "app": { "build": "3145896", "name": "12min", "namespace": "com.br.twelvemin", "version": "1.17.0" }, "device": { "adTrackingEnabled": true, "advertisingId": "24969485-d7d0-4911-b780-94125af16359", "id": "3c62353013cc6db4", "manufacturer": "Xiaomi", "model": "Mi A2", "name": "jasmine_sprout", "type": "android" }, "ip": "201.80.133.36", "library": { "name": "analytics-android", "version": "4.5.0-beta.0" }, "locale": "en-US", "network": { "bluetooth": false, "carrier": "", "cellular": false, "wifi": true }, "os": { "name": "Android", "version": "9" }, "screen": { "density": 3, "height": 2016, "width": 1080 }, "timezone": "America/Sao_Paulo", "traits": { "anonymousId": "ccc8ccca-d394-4321-bb1d-bf61bd5ba540", "email": "test@test.test", "userId": "id_987000" }, "userAgent": "Dalvik/2.1.0 (Linux; U; Android 9; Mi A2 Build/PKQ1.180904.001)" }, "event": "Application Opened", "integrations": {}, "messageId": "36bcbff0-2845-469e-92a8-8ace580ca87f", "originalTimestamp": "2019-10-01T23:03:48.985Z", "properties": { "from_background": true }, "receivedAt": "2019-10-02T02:00:28.512Z", "sentAt": "2019-10-02T02:00:28.817Z", "timestamp": "2019-10-01T23:03:48.680Z", "type": "track", "userId": "id_987000", "writeKey": "Ez8vrXaJo3Av9SUN5e8LLbj5szemfQmV" }'
+          id="androidTrackPayload">
+        <code>
                     analytics.track("Application Opened", new Properties()
                     .putValue("from_background", true));
                     </code>
-          <button id="androidTrackCopy" class="copybutton">copy</button>
-          <button id="androidTrackCopyPayload" class="copybutton">payload</button>
+        <button id="androidTrackCopy" class="copybutton">copy</button>
+        <button id="androidTrackCopyPayload" class="copybutton">payload</button>
+      </div>
+      <div class="events" id="androidEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
         </div>
-        <div class="events" id="androidEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/android/#group" target=_blank>Group</a></h3>
-          </div>
-          <input type="hidden"
-            value='Analytics.with(context).group("a users id", "a group id", new Traits().putEmployees(20));'
-            id="androidGroupEvent">
-          <code>
+        <input type="hidden"
+          value='Analytics.with(context).group("a users id", "a group id", new Traits().putEmployees(20));'
+          id="androidGroupEvent">
+        <code>
                     Analytics.with(context).group("a user's id", "a group id", 
                     new Traits().putEmployees(20));
               </code>
-          <button id="androidGroupCopy" class="copybutton">copy</button>
+        <button id="androidGroupCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="androidEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
         </div>
-        <div class="events" id="androidEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/android/#alias" target=_blank>Alias</a></h3>
-          </div>
-          <input type="hidden" value='Analytics.with(context).alias(newId) Analytics.with(context).identify(newId);'
-            id="androidAliasEvent">
-          <code>
+        <input type="hidden" value='Analytics.with(context).alias(newId) Analytics.with(context).identify(newId);'
+          id="androidAliasEvent">
+        <code>
                     Analytics.with(context).alias(newId)
                     Analytics.with(context).identify(newId);
                 </code>
-          <button id="androidAliasCopy" class="copybutton">copy</button>
-        </div>
+        <button id="androidAliasCopy" class="copybutton">copy</button>
       </div>
-      <div id='ios-display'>
-        <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#screen" target=_blank>Screen</a></h3>
-          </div>
-          <input type="hidden"
-            value='[[SEGAnalytics sharedAnalytics] screen:@"Photo Feed" properties:@{ @"Feed Type": @"private" }];'
-            id="iosScreenEvent">
-          <code>
+    </div>
+    <div id='ios-display'>
+      <div class="events" id="iosEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/ios/#screen" target=_blank>Screen</a></h3>
+        </div>
+        <input type="hidden"
+          value='[[SEGAnalytics sharedAnalytics] screen:@"Photo Feed" properties:@{ @"Feed Type": @"private" }];'
+          id="iosScreenEvent">
+        <code>
                   [[SEGAnalytics sharedAnalytics] screen:@"Photo Feed"
                   properties:@{ @"Feed Type": @"private" }];
                 </code>
-          <button id="iosScreenCopy" class="copybutton">copy</button>
+        <button id="iosScreenCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="iosEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/ios/#identify" target=_blank>Identify</a></h3>
         </div>
-        <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#identify" target=_blank>Identify</a></h3>
-          </div>
-          <input type="hidden"
-            value='[[SEGAnalytics sharedAnalytics] identify:@"a users id" traits:@{ @"email": @"a users email address" }];'
-            id="iosIdentifyEvent">
-          <code>
+        <input type="hidden"
+          value='[[SEGAnalytics sharedAnalytics] identify:@"a users id" traits:@{ @"email": @"a users email address" }];'
+          id="iosIdentifyEvent">
+        <code>
                     [[SEGAnalytics sharedAnalytics] identify:@"a user's id"
                     traits:@{ @"email": @"a user's email address" }];
                   </code>
-          <button id="iosIdentifyCopy" class="copybutton">copy</button>
+        <button id="iosIdentifyCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="iosEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/ios/#track" target=_blank>Track</a></h3>
         </div>
-        <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#track" target=_blank>Track</a></h3>
-          </div>
-          <input type="hidden"
-            value='[[SEGAnalytics sharedAnalytics] track:@"Item Purchased" properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];'
-            id="iosTrackEvent">
-          <code>
+        <input type="hidden"
+          value='[[SEGAnalytics sharedAnalytics] track:@"Item Purchased" properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];'
+          id="iosTrackEvent">
+        <code>
                       [[SEGAnalytics sharedAnalytics] track:@"Item Purchased"
                        properties:@{ @"item": @"Sword of Heracles", @"revenue": @2.95 }];
                     </code>
-          <button id="iosTrackCopy" class="copybutton">copy</button>
+        <button id="iosTrackCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="iosEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/ios/#group" target=_blank>Group</a></h3>
         </div>
-        <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#group" target=_blank>Group</a></h3>
-          </div>
-          <input type="hidden"
-            value='[[SEGAnalytics sharedAnalytics] group:@"group123" traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];'
-            id="iosGroupEvent">
-          <code>
+        <input type="hidden"
+          value='[[SEGAnalytics sharedAnalytics] group:@"group123" traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];'
+          id="iosGroupEvent">
+        <code>
                         [[SEGAnalytics sharedAnalytics] group:@"group123"
                         traits:@{ @"name": @"Initech", @"description": @"Accounting Software" }];
                       </code>
-          <button id="iosGroupCopy" class="copybutton">copy</button>
+        <button id="iosGroupCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="iosEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/mobile/ios/#alias" target=_blank>Alias</a></h3>
         </div>
-        <div class="events" id="iosEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/mobile/ios/#alias" target=_blank>Alias</a></h3>
-          </div>
-          <input type="hidden" value='[[SEGAnalytics sharedAnalytics] alias:@"some new id"];' id="iosAliasEvent">
-          <code>
+        <input type="hidden" value='[[SEGAnalytics sharedAnalytics] alias:@"some new id"];' id="iosAliasEvent">
+        <code>
                           [[SEGAnalytics sharedAnalytics] alias:@"some new id"];
                         </code>
-          <button id="iosAliasCopy" class="copybutton">copy</button>
-        </div>
+        <button id="iosAliasCopy" class="copybutton">copy</button>
       </div>
     </div>
+  </div>
 
-    <div id="Server" class="tabcontent">
-      <form class="form">
-        <div id="switch-fieldServer">
-          <input type="radio" id="radio-node" name="switch-a" value="nodejs" checked />
-          <label for="radio-node">Node.js</label>
-          <input type="radio" id="radio-java" name="switch-a" value="java" />
-          <label for="radio-java">Java</label>
+  <div id="Server" class="tabcontent">
+    <form class="form">
+      <div id="switch-fieldServer">
+        <input type="radio" id="radio-node" name="switch-a" value="nodejs" checked />
+        <label for="radio-node">Node.js</label>
+        <input type="radio" id="radio-java" name="switch-a" value="java" />
+        <label for="radio-java">Java</label>
+      </div>
+    </form>
+
+    <div id='nodejs-display'>
+      <div class="events" id="nodejsEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/node/#page" target=_blank>Page</a></h3>
         </div>
-      </form>
-
-      <div id='nodejs-display'>
-        <div class="events" id="nodejsEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/node/#page" target=_blank>Page</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.page({ userId: '019mr8mf4r', category: 'Docs', name: 'Node.js Library', properties: { url: 'https://segment.com/docs/libraries/node', path: '/docs/libraries/node/', title: 'Node.js Library - Segment', referrer: 'https://github.com/segmentio/analytics-node' } });"
-            id="nodejsPageEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.page({ userId: '019mr8mf4r', category: 'Docs', name: 'Node.js Library', properties: { url: 'https://segment.com/docs/libraries/node', path: '/docs/libraries/node/', title: 'Node.js Library - Segment', referrer: 'https://github.com/segmentio/analytics-node' } });"
+          id="nodejsPageEvent">
+        <code>
                 analytics.page({
                   userId: '019mr8mf4r',
                   category: 'Docs',
@@ -326,16 +336,16 @@
                   }
                 });
                 </code>
-          <button id="nodeJsPageCopy" class="copybutton">copy</button>
+        <button id="nodeJsPageCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="nodejsEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/node/#identify" target=_blank>Identify</a></h3>
         </div>
-        <div class="events" id="nodejsEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/node/#identify" target=_blank>Identify</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.identify({ userId: '019mr8mf4r', traits: { name: 'Michael Bolton', email: 'mbolton@initech.com', plan: 'Enterprise', friends: 42 } });"
-            id="nodejsIdentifyEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.identify({ userId: '019mr8mf4r', traits: { name: 'Michael Bolton', email: 'mbolton@initech.com', plan: 'Enterprise', friends: 42 } });"
+          id="nodejsIdentifyEvent">
+        <code>
                   analytics.identify({
                     userId: '019mr8mf4r',
                     traits: {
@@ -346,16 +356,16 @@
                     }
                   });
                 </code>
-          <button id="nodeJsIdentifyCopy" class="copybutton">copy</button>
+        <button id="nodeJsIdentifyCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="nodejsEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/node/#track" target=_blank>Track</a></h3>
         </div>
-        <div class="events" id="nodejsEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/node/#track" target=_blank>Track</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.track({ userId: '019mr8mf4r', event: 'Item Purchased', properties: { revenue: 39.95, shippingMethod: '2-day' } });"
-            id="nodejsTrackEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.track({ userId: '019mr8mf4r', event: 'Item Purchased', properties: { revenue: 39.95, shippingMethod: '2-day' } });"
+          id="nodejsTrackEvent">
+        <code>
                     analytics.track({
                       userId: '019mr8mf4r',
                       event: 'Item Purchased',
@@ -365,16 +375,16 @@
                       }
                     });
                   </code>
-          <button id="nodeJsTrackCopy" class="copybutton">copy</button>
+        <button id="nodeJsTrackCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="nodejsEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/node/#group" target=_blank>Group</a></h3>
         </div>
-        <div class="events" id="nodejsEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/node/#group" target=_blank>Group</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.group({ userId: '019mr8mf4r', groupId: '56', traits: { name: 'Initech', description: 'Accounting Software' } });"
-            id="nodejsGroupEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.group({ userId: '019mr8mf4r', groupId: '56', traits: { name: 'Initech', description: 'Accounting Software' } });"
+          id="nodejsGroupEvent">
+        <code>
                       analytics.group({
                         userId: '019mr8mf4r',
                         groupId: '56',
@@ -384,33 +394,32 @@
                         }
                       });
                     </code>
-          <button id="nodeJsGroupCopy" class="copybutton">copy</button>
+        <button id="nodeJsGroupCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="nodejsEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/node/#alias" target=_blank>Alias</a></h3>
         </div>
-        <div class="events" id="nodejsEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/node/#alias" target=_blank>Alias</a></h3>
-          </div>
-          <input type="hidden" value="analytics.alias({ previousId: 'old_id', userId: 'new_id' });"
-            id="nodejsAliasEvent">
-          <code>
+        <input type="hidden" value="analytics.alias({ previousId: 'old_id', userId: 'new_id' });" id="nodejsAliasEvent">
+        <code>
                         analytics.alias({
                           previousId: 'old_id',
                           userId: 'new_id'
                         });
                       </code>
-          <button id="nodeJsAliasCopy" class="copybutton">copy</button>
-        </div>
+        <button id="nodeJsAliasCopy" class="copybutton">copy</button>
       </div>
+    </div>
 
-      <div id='java-display'>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#page" target=_blank>Page</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.enqueue(PageMessage.builder('Schedule') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('category', 'Sports') .put('path', '/sports/schedule') .build() ) );"
-            id="javaPageEvent">
-          <code>
+    <div id='java-display'>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#page" target=_blank>Page</a></h3>
+        </div>
+        <input type="hidden"
+          value="analytics.enqueue(PageMessage.builder('Schedule') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('category', 'Sports') .put('path', '/sports/schedule') .build() ) );"
+          id="javaPageEvent">
+        <code>
                   analytics.enqueue(PageMessage.builder("Schedule")
                   .userId("f4ca124298")
                   .properties(ImmutableMap.builder()
@@ -420,16 +429,16 @@
                   )
               );
                 </code>
-          <button id="javaPageCopy" class="copybutton">copy</button>
+        <button id="javaPageCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#screen" target=_blank>Screen</a></h3>
         </div>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#screen" target=_blank>Screen</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.enqueue(ScreenMessage.builder('Schedul') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('category', 'Sports') .put('path', '/sports/schedule') .build() ) );"
-            id="javaScreenEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.enqueue(ScreenMessage.builder('Schedul') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('category', 'Sports') .put('path', '/sports/schedule') .build() ) );"
+          id="javaScreenEvent">
+        <code>
                     analytics.enqueue(ScreenMessage.builder("Schedule")
                     .userId("f4ca124298")
                     .properties(ImmutableMap.builder()
@@ -439,16 +448,16 @@
                     )
                 );
                   </code>
-          <button id="javaScreenCopy" class="copybutton">copy</button>
+        <button id="javaScreenCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#identify" target=_blank>Identify</a></h3>
         </div>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#identify" target=_blank>Identify</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.enqueue(IdentifyMessage.builder() .userId('f4ca124298') .traits(ImmutableMap.builder() .put('name', 'Michael Bolton') .put('email', 'mbolton@initech.com') .build() ) );"
-            id="javaIdentifyEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.enqueue(IdentifyMessage.builder() .userId('f4ca124298') .traits(ImmutableMap.builder() .put('name', 'Michael Bolton') .put('email', 'mbolton@initech.com') .build() ) );"
+          id="javaIdentifyEvent">
+        <code>
                 analytics.enqueue(IdentifyMessage.builder()
                 .userId("f4ca124298")
                 .traits(ImmutableMap.builder()
@@ -458,16 +467,16 @@
                 )
             );
                     </code>
-          <button id="javaIdentifyCopy" class="copybutton">copy</button>
+        <button id="javaIdentifyCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#track" target=_blank>Track</a></h3>
         </div>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#track" target=_blank>Track</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.enqueue(TrackMessage.builder('Item Purchased') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('revenue', 39.95) .put('shipping', '2-day') .build() ) );"
-            id="javaTrackEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.enqueue(TrackMessage.builder('Item Purchased') .userId('f4ca124298') .properties(ImmutableMap.builder() .put('revenue', 39.95) .put('shipping', '2-day') .build() ) );"
+          id="javaTrackEvent">
+        <code>
                 analytics.enqueue(TrackMessage.builder("Item Purchased")
                 .userId("f4ca124298")
                 .properties(ImmutableMap.builder()
@@ -477,16 +486,16 @@
                 )
             );
                       </code>
-          <button id="javaTrackCopy" class="copybutton">copy</button>
+        <button id="javaTrackCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#group" target=_blank>Group</a></h3>
         </div>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#group" target=_blank>Group</a></h3>
-          </div>
-          <input type="hidden"
-            value="analytics.enqueue(GroupMessage.builder('some-group-id') .userId('f4ca12429') .traits(ImmutableMap.builder() .put('name', 'Segment') .put('size', 50) .build() ) );"
-            id="javaGroupEvent">
-          <code>
+        <input type="hidden"
+          value="analytics.enqueue(GroupMessage.builder('some-group-id') .userId('f4ca12429') .traits(ImmutableMap.builder() .put('name', 'Segment') .put('size', 50) .build() ) );"
+          id="javaGroupEvent">
+        <code>
                 analytics.enqueue(GroupMessage.builder("some-group-id")
                 .userId("f4ca124298")
                 .traits(ImmutableMap.builder()
@@ -496,171 +505,173 @@
                 )
             );
                         </code>
-          <button id="javaGroupCopy" class="copybutton">copy</button>
+        <button id="javaGroupCopy" class="copybutton">copy</button>
+      </div>
+      <div class="events" id="javaEvent">
+        <div class="headerlink">
+          <h3><a href="https://segment.com/docs/sources/server/java/#alias" target=_blank>Alias</a></h3>
         </div>
-        <div class="events" id="javaEvent">
-          <div class="headerlink">
-            <h3><a href="https://segment.com/docs/sources/server/java/#alias" target=_blank>Alias</a></h3>
-          </div>
-          <input type="hidden" value="analytics.enqueue(AliasMessage.builder('previousId') .userId('f4ca124298') );"
-            id="javaAliasEvent">
-          <code>
+        <input type="hidden" value="analytics.enqueue(AliasMessage.builder('previousId') .userId('f4ca124298') );"
+          id="javaAliasEvent">
+        <code>
                   analytics.enqueue(AliasMessage.builder("previousId")
                     .userId("f4ca124298")
                 );
                           </code>
-          <button id="javaAliasCopy" class="copybutton">copy</button>
-        </div>
+        <button id="javaAliasCopy" class="copybutton">copy</button>
       </div>
     </div>
+  </div>
 
-    <div id="q3" class="tabcontent">
-        <div class="headerlink linkheader">
-            <h3>Getting Started</h3>
-          </div>
+  <div id="q3" class="tabcontent">
+    <div class="headerlink linkheader">
+      <h3>Getting Started</h3>
     </div>
+  </div>
 
-    <div id="links" class="tabcontent">
-      <div class="headerlink linkheader">
-          <h3>Getting Started</h3>
-        </div>
-        <ul class="linkul">
-          <div class="events">
-            <li class="tooltip">
-              <a href="https://segment.com/docs/sources/website/analytics.js/quickstart/" target=_blank>Quickstart:
-                Analytics.js</a>
-              <span class="tooltiptext">Quickstart guide for implementing Analytics.js </span>
-            </li>
-          </div>
-          <div class="events">
-            <li class="tooltip">
-              <a href="https://segment.com/academy/" target=_blank>Analytics Academy</a>
-              <span class="tooltiptext">Learn the basics of how to think about analytics and level-up to implementation strategies for what data to collect</span>
-            </li>
-          </div>
-          <div class="events">
-            <li class="tooltip">
-              <a href="https://university.segment.com/" target=_blank>Segment University</a>
-              <span class="tooltiptext">find courses ranging from Implementation Fundamentals to Advanced Features, organized by product</span>
-            </li>
-          </div>
-        </ul>
-
-      <div class="headerlink linkheader">
-        <h3>Best Practices</h3>
-      </div>
-      <ul class="linkul">
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/guides/best-practices/what-are-best-practices-for-identifying-users/"
-              target=_blank>Identifying Users</a>
-            <span class="tooltiptext">Track newly registered users the right way. </span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/guides/best-practices/should-i-instrument-data-collection-on-the-client-or-server/"
-              target=_blank>Client vs. Server Side</a>
-            <span class="tooltiptext">Should I instrument data collection on the client or server?</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/guides/best-practices/how-do-I-test-my-connections/" target=_blank>How do
-              I
-              test my connections?</a>
-            <span class="tooltiptext">How should I test my connections?</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/sources/website/analytics.js/#selecting-destinations"
-              target=_blank>Integrations Object</a>
-            <span class="tooltiptext">How to use the integrations object?</span>
-          </li>
-        </div>
-      </ul>
-
-      <div class="headerlink linkheader">
-        <h3>Dev Center</h3>
-      </div>
-      <ul class="linkul">
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://paper.dropbox.com/doc/Developer-Center-Guide-for-Success--Ag~isIQ6jaVbPF7rQBeKxD9xAg-v9PMf76YPYxgGTIVOTThj"
-              target=_blank>Dev Center Guide for Success</a>
-            <span class="tooltiptext">This is the master guide for Dev Center</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://paper.dropbox.com/doc/Developer-Center-Macros--AmfzLRpbaLWQCOIWbN_5C2e1Ag-upmhirSrwWjVql6UrGWfm"
-              target=_blank>Dev Center Macros</a>
-            <span class="tooltiptext">Dev Center Zendesk Macros</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://hackmd.io/t7amLXluS7-39rg7ARZgSA?view" target=_blank>Segment Doc Template</a>
-            <span class="tooltiptext">Segment documentation template</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/partners/build-webhook/?origin_team=T026HRLC7#status-code"
-              target=_blank>Status Codes</a>
-            <span class="tooltiptext">The required status codes</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://segment.com/docs/partners/?origin_team=T026HRLC7#post-launch" target=_blank>Post-Launch
-              Requirements</a>
-            <span class="tooltiptext">The post-launch requirements for an integration to go into a public state</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://www.contents.io/teams/segment/collections/integrations" target=_blank>Contents.io</a>
-            <span class="tooltiptext">Contents.io used to build catalog entries</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://app.segment.com/partner-portal/integration/" target=_blank>Partner-Portal</a>
-            <span class="tooltiptext">Used to read and write an integrations settings</span>
-          </li>
-        </div>
-        <div class="events">
-          <li class="tooltip">
-            <a href="https://docs.google.com/document/d/1kvAvAHLyM3pOq-lBcZJhP_X_KivHlk1eiFy-5ERWDXc/edit"
-              target=_blank>Catalog Template</a>
-            <span class="tooltiptext">Segment catalog template</span>
-          </li>
-        </div>
-      </ul>
-
-      <div class="headerlink linkheader">
-          <h3>Success Engineer Resources</h3>
-        </div>
-        <ul class="linkul">
-          <div class="events">
-            <li class="tooltip">
-              <a href="https://segment.atlassian.net/wiki/spaces/JUNGLEBOOK/overview"
-                target=_blank>The Jungle Book</a>
-              <span class="tooltiptext">Welcome to the jungle.</span>
-            </li>
-          </div>
-          <div class="events">
-            <li class="tooltip">
-              <a href="https://paper.dropbox.com/doc/Athena-Playbook--AmrEQ92lyT_IYpA5edCH33OnAg-tP9UVQCh5kCgknR1C1oSe"
-                target=_blank>Athena Playbook</a>
-              <span class="tooltiptext">Athena can run SQL queries over our S3 logs. A good tool for one-off analysis.</span>
-            </li>
-          </div>
-        </ul>
-      <BR>
+  <div id="links" class="tabcontent">
+    <div class="headerlink linkheader">
+      <h3>Getting Started</h3>
     </div>
+    <ul class="linkul">
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/sources/website/analytics.js/quickstart/" target=_blank>Quickstart:
+            Analytics.js</a>
+          <span class="tooltiptext">Quickstart guide for implementing Analytics.js </span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/academy/" target=_blank>Analytics Academy</a>
+          <span class="tooltiptext">Learn the basics of how to think about analytics and level-up to implementation
+            strategies for what data to collect</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://university.segment.com/" target=_blank>Segment University</a>
+          <span class="tooltiptext">find courses ranging from Implementation Fundamentals to Advanced Features,
+            organized by product</span>
+        </li>
+      </div>
+    </ul>
+
+    <div class="headerlink linkheader">
+      <h3>Best Practices</h3>
+    </div>
+    <ul class="linkul">
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/guides/best-practices/what-are-best-practices-for-identifying-users/"
+            target=_blank>Identifying Users</a>
+          <span class="tooltiptext">Track newly registered users the right way. </span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/guides/best-practices/should-i-instrument-data-collection-on-the-client-or-server/"
+            target=_blank>Client vs. Server Side</a>
+          <span class="tooltiptext">Should I instrument data collection on the client or server?</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/guides/best-practices/how-do-I-test-my-connections/" target=_blank>How do
+            I
+            test my connections?</a>
+          <span class="tooltiptext">How should I test my connections?</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/sources/website/analytics.js/#selecting-destinations"
+            target=_blank>Integrations Object</a>
+          <span class="tooltiptext">How to use the integrations object?</span>
+        </li>
+      </div>
+    </ul>
+
+    <div class="headerlink linkheader">
+      <h3>Dev Center</h3>
+    </div>
+    <ul class="linkul">
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://paper.dropbox.com/doc/Developer-Center-Guide-for-Success--Ag~isIQ6jaVbPF7rQBeKxD9xAg-v9PMf76YPYxgGTIVOTThj"
+            target=_blank>Dev Center Guide for Success</a>
+          <span class="tooltiptext">This is the master guide for Dev Center</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://paper.dropbox.com/doc/Developer-Center-Macros--AmfzLRpbaLWQCOIWbN_5C2e1Ag-upmhirSrwWjVql6UrGWfm"
+            target=_blank>Dev Center Macros</a>
+          <span class="tooltiptext">Dev Center Zendesk Macros</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://hackmd.io/t7amLXluS7-39rg7ARZgSA?view" target=_blank>Segment Doc Template</a>
+          <span class="tooltiptext">Segment documentation template</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/partners/build-webhook/?origin_team=T026HRLC7#status-code"
+            target=_blank>Status Codes</a>
+          <span class="tooltiptext">The required status codes</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.com/docs/partners/?origin_team=T026HRLC7#post-launch" target=_blank>Post-Launch
+            Requirements</a>
+          <span class="tooltiptext">The post-launch requirements for an integration to go into a public state</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://www.contents.io/teams/segment/collections/integrations" target=_blank>Contents.io</a>
+          <span class="tooltiptext">Contents.io used to build catalog entries</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://app.segment.com/partner-portal/integration/" target=_blank>Partner-Portal</a>
+          <span class="tooltiptext">Used to read and write an integrations settings</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://docs.google.com/document/d/1kvAvAHLyM3pOq-lBcZJhP_X_KivHlk1eiFy-5ERWDXc/edit"
+            target=_blank>Catalog Template</a>
+          <span class="tooltiptext">Segment catalog template</span>
+        </li>
+      </div>
+    </ul>
+
+    <div class="headerlink linkheader">
+      <h3>Success Engineer Resources</h3>
+    </div>
+    <ul class="linkul">
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://segment.atlassian.net/wiki/spaces/JUNGLEBOOK/overview" target=_blank>The Jungle Book</a>
+          <span class="tooltiptext">Welcome to the jungle.</span>
+        </li>
+      </div>
+      <div class="events">
+        <li class="tooltip">
+          <a href="https://paper.dropbox.com/doc/Athena-Playbook--AmrEQ92lyT_IYpA5edCH33OnAg-tP9UVQCh5kCgknR1C1oSe"
+            target=_blank>Athena Playbook</a>
+          <span class="tooltiptext">Athena can run SQL queries over our S3 logs. A good tool for one-off
+            analysis.</span>
+        </li>
+      </div>
+    </ul>
+    <BR>
+  </div>
 
   </div>
 </body>
