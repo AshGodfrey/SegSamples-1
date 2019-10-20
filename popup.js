@@ -381,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var number = document.getElementById("member").value;
     var container = document.getElementById("container");
     let dropdownVal = document.getElementById('dropDownSelectEventType').value
+    container.style.display = "inline-block";
     while (container.hasChildNodes()) {
       container.removeChild(container.lastChild);
     }
@@ -406,6 +407,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let input = document.getElementById('dropDownSelectEventType').value
     let eventNameTextBox = document.getElementById('eventName');
     input = input.toLowerCase();
+    let properties = document.getElementById('container')
 
     if (input == "identify" || input == "group") {
       document.getElementById('member').placeholder = "Number of traits";
@@ -441,6 +443,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     else if (input == "alias") {
       eventNameTextBox.placeholder = "Previous id"
+      properties.style.display = "none";
     }
   }
 });
