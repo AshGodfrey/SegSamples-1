@@ -133,8 +133,7 @@
           </select>
           <br>
 
-          <input type="text" name="Event Name" id="eventName" value="" placeholder="Event name"><br>
-
+          <input type="text" name="Event Name" id="eventName" value="" placeholder="Page name"><br>
           <input type="text" id="member" name="member" value="" placeholder="Number of properties"><br />
           <button class="tabbutton1" id="fillDetail">Add Properties</button>
           <div id="container" />
@@ -144,7 +143,9 @@
           <code>
 
           </code>
-          <button class="tabbutton1" id="eventBuilder">Build</button>
+          <input type="hidden" value='' id="eventBuilderEvent">
+          <button class="tabbutton1" id="eventBuilder">Build</button><br>
+          <button id="eventBuilderJsCopy" class="copybutton">copy</button>
         </div>
       </div>
     </div>

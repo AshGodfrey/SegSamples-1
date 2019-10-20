@@ -273,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("eventBuilder").addEventListener("click", eventBuilder);
 
   function eventBuilder() {
+    let eventNameTextBox = document.getElementById('eventName');
     let eventName = document.getElementById('eventName').value
     let actualEvent = document.getElementById('muhCode').value
     let x = document.querySelector("#muhCode > code")
@@ -301,15 +302,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let messagePage = "analytics.page(\"" + eventName + "\"" + ", \{";
     let messagePageNoProps = "analytics.page(\"" + eventName + "\");";
     let messageIdentify = "analytics.identify(\"" + eventName + "\"" + ", \{";
+    let messageIdentifyNoTraits = "analytics.identify(\"" + eventName + "\");";
     let messageTrack = "analytics.track(\"" + eventName + "\"" + ", \{";
+    let messageTrackNoProperties = "analytics.track(\"" + eventName + "\");";
     let messageGroup = "analytics.group(\"" + eventName + "\"" + ", \{";
+    let messageGroupNoTraits = "analytics.group(\"" + eventName + "\");";
     let messageAlias = "analytics.alias(\"" + eventName + "\"";
 
     if (input == "page") {
-      if(filteredProps.length == 0){
+      if (filteredProps.length == 0) {
         x.innerHTML = messagePageNoProps;
       }
-      else if(filteredProps.length > 0){
+      else if (filteredProps.length > 0) {
         for (let index = 0; index < filteredProps.length; index += 2) {
           messagePage += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
           submessage = messagePage.substring(0, messagePage.length - 1)
@@ -318,6 +322,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     else if (input == "identify") {
+      if (filteredProps.length == 0) {
+        x.innerHTML = messageIdentifyNoTraits;
+      }
       for (let index = 0; index < filteredProps.length; index += 2) {
         messageIdentify += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
         submessage = messageIdentify.substring(0, messageIdentify.length - 1)
@@ -325,6 +332,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     else if (input == "track") {
+      if (eventName == "") {
+        eventNameTextBox.style.borderColor = "red";
+      }
+      else if (eventName != "") {
+        x.innerHTML = messageTrackNoProperties;
+        eventNameTextBox.style.borderColor = "unset";
+      }
       for (let index = 0; index < filteredProps.length; index += 2) {
         messageTrack += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
         submessage = messageTrack.substring(0, messageTrack.length - 1)
@@ -332,6 +346,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     else if (input == "group") {
+      if (eventName == "") {
+        eventNameTextBox.style.borderColor = "red";
+      }
+      else if (eventName != "") {
+        x.innerHTML = messageGroupNoTraits;
+        eventNameTextBox.style.borderColor = "unset";
+      }
       for (let index = 0; index < filteredProps.length; index += 2) {
         messageGroup += ` ${filteredProps[index]}:"${filteredProps[index + 1]}",`;
         submessage = messageGroup.substring(0, messageGroup.length - 1)
@@ -339,7 +360,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     else if (input == "alias") {
-        x.innerHTML = messageAlias + "});";  
+      if (eventName == "") {
+        eventNameTextBox.style.borderColor = "red";
+      }
+      else if (eventName != "") {
+        eventNameTextBox.style.borderColor = "unset";
+        x.innerHTML = messageGroupNoTraits;
+        x.innerHTML = messageAlias + "});";
+      }
     }
   }
 
@@ -352,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function addFields() {
     var number = document.getElementById("member").value;
     var container = document.getElementById("container");
+    let dropdownVal = document.getElementById('dropDownSelectEventType').value
     while (container.hasChildNodes()) {
       container.removeChild(container.lastChild);
     }
@@ -360,6 +389,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       var input1 = document.createElement("input");
       input.type = "text";
       input1.type = "text";
+      input.placeholder = "name";
+      input1.placeholder = "value";
       container.appendChild(input);
       container.appendChild(input1);
       container.appendChild(document.createElement("br"));
@@ -373,6 +404,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   function search_events() {
     let input = document.getElementById('dropDownSelectEventType').value
+    let eventNameTextBox = document.getElementById('eventName');
     input = input.toLowerCase();
 
     if (input == "identify" || input == "group") {
@@ -380,16 +412,64 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.getElementById('fillDetail').innerText = "Add Traits"
       document.getElementById('member').style.display = "inline-block";
       document.getElementById('fillDetail').style.display = "inline-block"
+      eventNameTextBox.style.borderColor = "initial";
+
     }
     else if (input == "page" || input == "track") {
       document.getElementById('member').placeholder = "Number of properties";
       document.getElementById('fillDetail').innerText = "Add Properties"
       document.getElementById('member').style.display = "inline-block";
       document.getElementById('fillDetail').style.display = "inline-block"
+      eventNameTextBox.style.borderColor = "initial";
     }
     else if (input == "alias") {
       document.getElementById('member').style.display = "none";
       document.getElementById('fillDetail').style.display = "none"
+      eventNameTextBox.style.borderColor = "initial";
+    }
+    if (input == "page") {
+      eventNameTextBox.placeholder = "Page name";
+    }
+    else if (input == "identify") {
+      eventNameTextBox.placeholder = "User id"
+    }
+    else if (input == "track") {
+      eventNameTextBox.placeholder = "Event name"
+    }
+    else if (input == "group") {
+      eventNameTextBox.placeholder = "Group id"
+    }
+    else if (input == "alias") {
+      eventNameTextBox.placeholder = "Previous id"
     }
   }
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("eventBuilderJsCopy").addEventListener("click", copyEventBuilderCode, false);
+
+  let x = document.querySelector("#muhCode > code");
+
+  function copyEventBuilderCode() {
+    ss = x.innerText;
+    
+    copyStringToClipboard(ss);
+  }
+
+  function copyStringToClipboard (str) {
+    // Create new element
+    var el = document.createElement('textarea');
+    // Set value (string to be copied)
+    el.value = str;
+    // Set non-editable to avoid focus and move outside of view
+    el.setAttribute('readonly', '');
+    el.style = {position: 'absolute', left: '-9999px'};
+    document.body.appendChild(el);
+    // Select text inside element
+    el.select();
+    // Copy text to clipboard
+    document.execCommand('copy');
+    // Remove temporary element
+    document.body.removeChild(el);
+ }
 });
