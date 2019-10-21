@@ -1,9 +1,10 @@
-# Title Here #
+# Segment Samples Extension #
 
 ## Description: ## 
 Segment Samples was created for Hackweek to streamline the process of finding sample calls. Since it's creation, it has expanded in scope slightly to also include helpful links and commands for those in Q3!
 
 ## Table of Contents: ## 
+1.[Installation](#installation)
 
 ## Installation ##
 
@@ -68,3 +69,6 @@ Scrolling over a link will provide a tooltip so you can determine if a resource 
 
 <a href="https://github.com/gezgblack)"><img src="https://avatars0.githubusercontent.com/u/7914065?s=460&v=4" alt="drawing" width="100"/></a> <a href="https://github.com/inertiawhoosh)"><img src="https://avatars0.githubusercontent.com/u/44040482?s=460&v=4 =100px" alt="drawing" width="100"/></a>
 
+## Future of the Extension ##
+
+Though this app is ready for use today, the following are things we would love to see eventually: 
