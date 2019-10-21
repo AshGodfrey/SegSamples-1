@@ -65,9 +65,9 @@ As a note, if you search, and make a typo, you will need to clear the search bar
 Scrolling over a link will provide a tooltip so you can determine if a resource might be right for you.
 
 ## Credits ##
-[![Shamil](https://avatars0.githubusercontent.com/u/7914065?s=460&v=4](https://github.com/gezgblack)
+[![Shamil](https://avatars0.githubusercontent.com/u/7914065?s=460&v=4](https://github.com/gezgblack)]
 
-[![Tori](https://avatars0.githubusercontent.com/u/44040482?s=460&v=4](https://github.com/inertiawhoosh)
+[![Tori](https://avatars0.githubusercontent.com/u/44040482?s=460&v=4](https://github.com/inertiawhoosh)]
 
 ## Hackweek ##
 
