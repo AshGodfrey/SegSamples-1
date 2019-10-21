@@ -5,13 +5,13 @@ Segment Samples was created for Hackweek to streamline the process of finding sa
 
 ## Table of Contents: ## 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [Usage](#usage)<BR>
   a. [Information Tabs](#information-tabs)<BR>
-  b. [Copying Calls/Payloads](#copying-calls-and-payloads)
-  c. [Toggling Call Type](#toggling-call-type)
-  d. [Event Builder](#event-builder)
-  e. [Search Feature](#search-feature)
-  f. [tooltips](#tooltips)
+  b. [Copying Calls/Payloads](#copying-calls-and-payloads)<BR>
+  c. [Toggling Call Type](#toggling-call-type)<BR>
+  d. [Event Builder](#event-builder)<BR>
+  e. [Search Feature](#search-feature)<BR>
+  f. [tooltips](#tooltips)<BR>
 3. [Credits](#credits)
 4. [Future Plans](#future-of-the-extension)
 
