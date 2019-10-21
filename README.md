@@ -11,9 +11,9 @@ Segment Samples was created for Hackweek to streamline the process of finding sa
   c. [Toggling Call Type](#toggling-call-type)<BR>
   d. [Event Builder](#event-builder)<BR>
   e. [Search Feature](#search-feature)<BR>
-  f. [tooltips](#tooltips)<BR>
+  f. [tooltips](#Tooltips)<BR>
 3. [Credits](#credits)
-4. [Future Plans](#future-of-the-extension)
+4. [Future Plans](#future-plans)
 
 ## Installation ##
 
@@ -78,6 +78,7 @@ Scrolling over a link will provide a tooltip so you can determine if a resource 
 
 <a href="https://github.com/gezgblack)"><img src="https://avatars0.githubusercontent.com/u/7914065?s=460&v=4" alt="drawing" width="100"/></a> <a href="https://github.com/inertiawhoosh)"><img src="https://avatars0.githubusercontent.com/u/44040482?s=460&v=4 =100px" alt="drawing" width="100"/></a>
 
-## Future of the Extension ##
+## Future Plans ##
 
 Though this app is ready for use today, the following are things we would love to see eventually: 
+- Client friendly version
