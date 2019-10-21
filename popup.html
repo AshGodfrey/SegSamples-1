@@ -124,7 +124,7 @@
         <div class="headerlink">
           <h3><a href="https://segment.com/docs/spec/alias/" target=_blank>Event Builder</a></h3>
 
-          <select id="dropDownSelectEventType">
+          <select id="dropDownSelectEventType" class="custom-select">
             <option value="page">Page</option>
             <option value="identify">Identify</option>
             <option value="track">Track</option>
@@ -133,19 +133,19 @@
           </select>
           <br>
 
-          <input type="text" name="Event Name" id="eventName" value="" placeholder="Page name"><br>
-          <input type="text" id="member" name="member" value="" placeholder="Number of properties"><br />
-          <button class="tabbutton1" id="fillDetail">Add Properties</button>
+          <input type="text" class="enterinput" name="Event Name" id="eventName" value="" placeholder="Page name"><br>
+          <input type="text" class="enterinput" id="member" name="member" value="" placeholder="Number of properties"><br />
+          <button class="tabbutton1" id="fillDetail" >Add Properties</button>
           <div id="container" />
 
         </div>
         <div id="muhCode">
+          <input type="hidden" value='' id="eventBuilderEvent">
+          <button class="tabbutton1" id="eventBuilder" >Build</button><br>
           <code>
             Click "Build" to build your event
           </code>
-          <input type="hidden" value='' id="eventBuilderEvent">
-          <button class="tabbutton1" id="eventBuilder">Build</button><br>
-          <button id="eventBuilderJsCopy" class="copybutton">copy</button>
+          <button id="eventBuilderJsCopy" class="copybuttonfull">copy</button>
         </div>
       </div>
     </div>

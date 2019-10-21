@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let properties = document.getElementById('container')
     numberOfPropertie = properties.children.length;
     var props = new Array();
-
+    
     for (i = 0; i < numberOfPropertie; i++) {
       if (properties.children[i].value != null) {
         props.push(properties.children[i].value);
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     else if (input == "track") {
       if (eventName == "") {
-        eventNameTextBox.style.borderColor = "red";
+        
       }
       else if (eventName != "") {
         x.innerHTML = messageTrackNoProperties;
