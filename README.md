@@ -1,12 +1,15 @@
 # Title Here #
 
 ## Description: ## 
+Segment Samples was created for Hackweek to streamline the process of finding sample calls. Since it's creation, it has expanded in scope slightly to also include helpful links and commands for those in Q3!
 
 ## Table of Contents: ## 
 
-## Instalation ##
+## Installation ##
 
 ## Usage ##
+
+(https://i.imgur.com/zk0ZMLy.png)
 
 ## Credits ##
 
