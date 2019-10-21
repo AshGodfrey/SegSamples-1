@@ -66,9 +66,7 @@ Scrolling over a link will provide a tooltip so you can determine if a resource 
 
 ## Credits ##
 
-<a href="https://github.com/gezgblack)"><img src="https://avatars0.githubusercontent.com/u/7914065?s=460&v=4" alt="drawing" width="200"/></a>
-
-<a href="https://github.com/inertiawhoosh)"><img src="https://avatars0.githubusercontent.com/u/44040482?s=460&v=4 =100px" alt="drawing" width="200"/></a>
+<a href="https://github.com/gezgblack)"><img src="https://avatars0.githubusercontent.com/u/7914065?s=460&v=4" alt="drawing" width="100"/></a> <a href="https://github.com/inertiawhoosh)"><img src="https://avatars0.githubusercontent.com/u/44040482?s=460&v=4 =100px" alt="drawing" width="100"/></a>
 
 ## Hackweek ##
 
