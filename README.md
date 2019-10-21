@@ -9,7 +9,7 @@ Segment Samples was created for Hackweek to streamline the process of finding sa
 
 ## Usage ##
 
-[flags](https://i.imgur.com/zk0ZMLy.png)
+![flags](https://i.imgur.com/zk0ZMLy.png)
 
 ## Credits ##
 
