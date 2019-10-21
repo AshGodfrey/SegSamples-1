@@ -4,7 +4,16 @@
 Segment Samples was created for Hackweek to streamline the process of finding sample calls. Since it's creation, it has expanded in scope slightly to also include helpful links and commands for those in Q3!
 
 ## Table of Contents: ## 
-1.[Installation](#installation)
+1. [Installation](#installation)
+2. [Usage](#usage)
+  a. [Information Tabs](#information-tabs)
+  b. [Copying Calls/Payloads](#copying-calls-and-payloads)
+  c. [Toggling Call Type](#toggling-call-type)
+  d. [Event Builder](#event-builder)
+  e. [Search Feature](#search-feature)
+  f. [tooltips](#tooltips)
+3. [Credits](#credits)
+4. [Future Plans](#future-of-the-extension)
 
 ## Installation ##
 
