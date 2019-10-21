@@ -81,4 +81,7 @@ Scrolling over a link will provide a tooltip so you can determine if a resource 
 ## Future Plans ##
 
 Though this app is ready for use today, the following are things we would love to see eventually: 
-- Client friendly version
+- Client facing verison 
+- Event Builder as an expanded stand-alone-tool for customers/staff, with an emphasis on usability for non technical users.
+- More Q3 Commands
+- Automatic copying of links to the clipboard in the "links" tab, if desired by people
