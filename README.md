@@ -19,6 +19,7 @@ Segment Samples was created for Hackweek to streamline the process of finding sa
 1. Clone/Download this repo
 2. Go to your Chrome extensions at chrome://extensions/
 3. Toggle "Developer mode" at the top right of the page
+https://cl.ly/b73b75cf7646
 4. Choose "Load unpacked" left top
 5. Choose the folder you cloned in step 1
 
