@@ -525,9 +525,49 @@
   </div>
 
   <div id="q3" class="tabcontent">
-    <div class="headerlink linkheader">
-      <h3>Getting Started</h3>
-    </div>
+         <div class="headerlink">
+             <h3>Run Commands</h3>
+         </div>
+          <code>
+             robo prod warehouse-tool ...
+          </code>
+   
+
+         <div class="headerlink">
+             <h4>Running a Replay</h4>
+         </div>
+          <code>
+             robo prod warehouse-tool replay -w warehouseID -p projectID --notify SLACKUSERNAME
+          </code>
+          <div class="headerlink">
+             <h4>Specific Tables</h4>
+         </div>
+          <code>
+             robo prod warehouse-tool replay -w warehouseID -p projectID -c COLLECTION 
+          </code>
+          <div class="headerlink">
+             <h4>Checking Specific Run Sync Status</h4>
+         </div>
+          <code>
+            robo prod warehouse-tool sync -w warehouseID -p projectID -r RUN
+          </code>
+          <div class="headerlink">
+            <h3>Change Column Types</h3>
+       </div>
+        <div class="headerlink">
+            <h4>Change in Segment's Schema</h4>
+        </div>
+         <code>
+          robo prod warehouse-tool schemas update -p projectID -c collection -P field --type string --dry-run
+         </code>
+        </div>
+        <div class="headerlink">
+          <h4>Match Column Type (Redshift)</h4>
+      </div>
+       <code>
+        robo prod warehouse-tool redshift schema-match --match-column-types -p projectID -w warehouseID --dry-run --force-column-types
+       </code>
+      </div>
   </div>
 
   <div id="links" class="tabcontent">
